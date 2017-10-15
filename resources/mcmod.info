@@ -1,0 +1,16 @@
+[
+{
+  "modid": "galaxite",
+  "name": "Galaxite",
+  "description": "New ore spawning in the end on the outer islands. Tools and Armor made with this ore, the Galaxite, have special protection againist \"End\" sources and a special ability when you fell into the void",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Insane96MCP"],
+  "credits": "The Forge and Minecraft forum for help :P",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

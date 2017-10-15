@@ -1,0 +1,14 @@
+item.galaxite:galaxite.name=Galaxite
+item.galaxite:galaxite_pickaxe.name=Galaxite Pickaxe
+item.galaxite:galaxite_axe.name=Galaxite Axe
+item.galaxite:galaxite_shovel.name=Galaxite Shovel
+item.galaxite:galaxite_hoe.name=Galaxite Hoe
+item.galaxite:galaxite_sword.name=Galaxite Sword
+
+item.galaxite:galaxite_helmet.name=Galaxite Helmet
+item.galaxite:galaxite_chestplate.name=Galaxite Chestplate
+item.galaxite:galaxite_leggings.name=Galaxite Leggings
+item.galaxite:galaxite_boots.name=Galaxite Boots
+
+tile.galaxite:galaxite_block.name=Galaxite Block
+tile.galaxite:galaxite_ore.name=Galaxite Ore
