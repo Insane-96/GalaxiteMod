@@ -4,6 +4,7 @@ import net.insane96mcp.galaxite.Galaxite;
 import net.insane96mcp.galaxite.block.BlockGalaxite;
 import net.insane96mcp.galaxite.block.BlockGalaxiteOre;
 import net.insane96mcp.galaxite.lib.Names;
+import net.insane96mcp.galaxite.worldgen.OreGenerator;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -21,31 +22,17 @@ public class ModBlocks {
 	public static BlockGalaxite galaxiteBlock;
 	public static BlockGalaxiteOre galaxiteOre;
 	public static void Init() {
-		ResourceLocation location = new ResourceLocation(Galaxite.MOD_ID, Names.GALAXITE_BLOCK);
 		galaxiteBlock = new BlockGalaxite();
-		galaxiteBlock.setRegistryName(location);
-		galaxiteBlock.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
-		galaxiteBlock.setHardness(15.0f);
-		galaxiteBlock.setResistance(10.0f);
-		galaxiteBlock.setHarvestLevel("pickaxe", 3);
 		GameRegistry.register(galaxiteBlock);
-		GameRegistry.register(new ItemBlock(galaxiteBlock), location);
+		GameRegistry.register(new ItemBlock(galaxiteBlock), galaxiteBlock.getRegistryName());
 
-		location = new ResourceLocation(Galaxite.MOD_ID, Names.GALAXITE_ORE);
 		galaxiteOre = new BlockGalaxiteOre();
-		galaxiteOre.setRegistryName(location);
-		galaxiteOre.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
-		galaxiteOre.setHardness(12.0f);
-		galaxiteOre.setResistance(33.3f);
-		galaxiteOre.setHarvestLevel("pickaxe", 3);
 		GameRegistry.register(galaxiteOre);
-		GameRegistry.register(new ItemBlock(galaxiteOre), location);
-		
-		GameRegistry.registerWorldGenerator(new GenOres(), 0);
+		GameRegistry.register(new ItemBlock(galaxiteOre), galaxiteOre.getRegistryName());
+		GameRegistry.registerWorldGenerator(new OreGenerator(), 123);
 	}
 	
 	public static void PostInit() {
-
 		GameRegistry.addRecipe(new ItemStack(galaxiteBlock, 1), "xxx", "xxx", "xxx", 'x', ModItems.galaxiteItem);
 	}
 	

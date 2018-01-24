@@ -8,8 +8,9 @@ import net.insane96mcp.galaxite.item.ItemGalaxiteHoe;
 import net.insane96mcp.galaxite.item.ItemGalaxitePickaxe;
 import net.insane96mcp.galaxite.item.ItemGalaxiteShovel;
 import net.insane96mcp.galaxite.item.ItemGalaxiteSword;
-import net.insane96mcp.galaxite.lib.MaterialHandler;
+import net.insane96mcp.galaxite.item.material.ModMaterial;
 import net.insane96mcp.galaxite.lib.Names;
+import net.insane96mcp.galaxite.lib.Properties;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -40,31 +41,31 @@ public class ModItems {
 		galaxiteItem = new ItemGalaxite(Names.GALAXITE_ITEM, CreativeTabs.MATERIALS);
 		GameRegistry.register(galaxiteItem);
 
-		galaxitePickaxeItem = new ItemGalaxitePickaxe(Names.GALAXITE_PICKAXE, MaterialHandler.Galaxite, CreativeTabs.TOOLS);
+		galaxitePickaxeItem = new ItemGalaxitePickaxe(Names.GALAXITE_PICKAXE, ModMaterial.Tool, CreativeTabs.TOOLS);
 		GameRegistry.register(galaxitePickaxeItem);
 
-		galaxiteShovelItem = new ItemGalaxiteShovel(Names.GALAXITE_SHOVEL, MaterialHandler.Galaxite, CreativeTabs.TOOLS);
+		galaxiteShovelItem = new ItemGalaxiteShovel(Names.GALAXITE_SHOVEL, ModMaterial.Tool, CreativeTabs.TOOLS);
 		GameRegistry.register(galaxiteShovelItem);
 
-		galaxiteAxeItem = new ItemGalaxiteAxe(Names.GALAXITE_AXE, MaterialHandler.Galaxite, CreativeTabs.TOOLS);
+		galaxiteAxeItem = new ItemGalaxiteAxe(Names.GALAXITE_AXE, ModMaterial.Tool, CreativeTabs.TOOLS);
 		GameRegistry.register(galaxiteAxeItem);
 		
-		galaxiteHoeItem = new ItemGalaxiteHoe(Names.GALAXITE_HOE, MaterialHandler.Galaxite, CreativeTabs.TOOLS);
+		galaxiteHoeItem = new ItemGalaxiteHoe(Names.GALAXITE_HOE, ModMaterial.Tool, CreativeTabs.TOOLS);
 		GameRegistry.register(galaxiteHoeItem);
 		
-		galaxiteSwordItem = new ItemGalaxiteSword(Names.GALAXITE_SWORD, MaterialHandler.Galaxite, CreativeTabs.COMBAT);
+		galaxiteSwordItem = new ItemGalaxiteSword(Names.GALAXITE_SWORD, ModMaterial.Tool, CreativeTabs.COMBAT);
 		GameRegistry.register(galaxiteSwordItem);
-
-		galaxiteHelmetItem = new ItemGalaxiteArmor(Names.GALAXITE_HELMET, MaterialHandler.galaxiteArmorMaterial, 0, EntityEquipmentSlot.HEAD);
+		
+		galaxiteHelmetItem = new ItemGalaxiteArmor(Names.GALAXITE_HELMET, ModMaterial.Armor, 0, EntityEquipmentSlot.HEAD);
 		GameRegistry.register(galaxiteHelmetItem);
 
-		galaxiteChestplateItem = new ItemGalaxiteArmor(Names.GALAXITE_CHESTPLATE, MaterialHandler.galaxiteArmorMaterial, 0, EntityEquipmentSlot.CHEST);
+		galaxiteChestplateItem = new ItemGalaxiteArmor(Names.GALAXITE_CHESTPLATE, ModMaterial.Armor, 0, EntityEquipmentSlot.CHEST);
 		GameRegistry.register(galaxiteChestplateItem);
 
-		galaxiteLeggingsItem = new ItemGalaxiteArmor(Names.GALAXITE_LEGGINGS, MaterialHandler.galaxiteArmorMaterial, 1, EntityEquipmentSlot.LEGS);
+		galaxiteLeggingsItem = new ItemGalaxiteArmor(Names.GALAXITE_LEGGINGS, ModMaterial.Armor, 1, EntityEquipmentSlot.LEGS);
 		GameRegistry.register(galaxiteLeggingsItem);
 
-		galaxiteBootsItem = new ItemGalaxiteArmor(Names.GALAXITE_BOOTS, MaterialHandler.galaxiteArmorMaterial, 0, EntityEquipmentSlot.FEET);
+		galaxiteBootsItem = new ItemGalaxiteArmor(Names.GALAXITE_BOOTS, ModMaterial.Armor, 0, EntityEquipmentSlot.FEET);
 		GameRegistry.register(galaxiteBootsItem);
 	}
 	
@@ -73,10 +74,10 @@ public class ModItems {
 		GameRegistry.addSmelting(ModBlocks.galaxiteOre, new ItemStack(galaxiteItem), 3.0f);
 
 		GameRegistry.addRecipe(new ItemStack(galaxitePickaxeItem), "vvv", " s ", " s ", 'v', galaxiteItem, 's', Items.STICK);
-		GameRegistry.addRecipe(new ItemStack(galaxiteShovelItem), " v ", " s ", " s ", 'v', galaxiteItem, 's', Items.STICK);
-		GameRegistry.addRecipe(new ItemStack(galaxiteAxeItem), " vv", " sv", " s ", 'v', galaxiteItem, 's', Items.STICK);
-		GameRegistry.addRecipe(new ItemStack(galaxiteHoeItem), " vv", " s ", " s ", 'v', galaxiteItem, 's', Items.STICK);
-		GameRegistry.addRecipe(new ItemStack(galaxiteSwordItem), " v ", " v ", " s ", 'v', galaxiteItem, 's', Items.STICK);
+		GameRegistry.addRecipe(new ItemStack(galaxiteShovelItem), "v", "s", "s", 'v', galaxiteItem, 's', Items.STICK);
+		GameRegistry.addRecipe(new ItemStack(galaxiteAxeItem), "vv", "sv", "s ", 'v', galaxiteItem, 's', Items.STICK);
+		GameRegistry.addRecipe(new ItemStack(galaxiteHoeItem), "vv", "s ", "s ", 'v', galaxiteItem, 's', Items.STICK);
+		GameRegistry.addRecipe(new ItemStack(galaxiteSwordItem), "v", "v", "s", 'v', galaxiteItem, 's', Items.STICK);
 
 		GameRegistry.addRecipe(new ItemStack(galaxiteHelmetItem), "vvv", "v v", 'v', galaxiteItem);
 		GameRegistry.addRecipe(new ItemStack(galaxiteChestplateItem), "v v", "vvv", "vvv", 'v', galaxiteItem);

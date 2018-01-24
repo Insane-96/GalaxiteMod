@@ -1,27 +1,29 @@
-package net.insane96mcp.galaxite;
+package net.insane96mcp.galaxite.proxies;
 
 import net.insane96mcp.galaxite.init.ModBlocks;
 import net.insane96mcp.galaxite.init.ModItems;
-import net.insane96mcp.galaxite.lib.CustomEventHandler;
-import net.minecraftforge.common.MinecraftForge;
+import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import scala.reflect.internal.Trees.New;
 
-public class CommonProxy {
+public class ClientProxy extends CommonProxy{
+
+	@Override
 	public void PreInit(FMLPreInitializationEvent event) {
-		ModItems.Init();
-		ModBlocks.Init();
+		super.PreInit(event);
 	}
-	
+
+	@Override
 	public void Init(FMLInitializationEvent event) {
-		ModItems.PostInit();
-		ModBlocks.PostInit();
-		MinecraftForge.EVENT_BUS.register(CustomEventHandler.class);
+		super.Init(event);
+		ModItems.InitClient(Minecraft.getMinecraft().getRenderItem().getItemModelMesher());
+		ModBlocks.InitClient(Minecraft.getMinecraft().getRenderItem().getItemModelMesher());
+	}
+
+	@Override
+	public void PostInit(FMLPostInitializationEvent event) {
+		super.PostInit(event);
 	}
 	
-	public void PostInit(FMLPostInitializationEvent event) {
-		
-	}
 }

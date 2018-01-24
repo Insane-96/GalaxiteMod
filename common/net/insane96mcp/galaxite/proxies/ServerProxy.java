@@ -1,29 +1,27 @@
-package net.insane96mcp.galaxite;
+package net.insane96mcp.galaxite.proxies;
 
-import net.insane96mcp.galaxite.init.ModBlocks;
-import net.insane96mcp.galaxite.init.ModItems;
-import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-public class ClientProxy extends CommonProxy{
+public class ServerProxy extends CommonProxy {
 
 	@Override
 	public void PreInit(FMLPreInitializationEvent event) {
+		// TODO Auto-generated method stub
 		super.PreInit(event);
 	}
 
 	@Override
 	public void Init(FMLInitializationEvent event) {
+		// TODO Auto-generated method stub
 		super.Init(event);
-		ModItems.InitClient(Minecraft.getMinecraft().getRenderItem().getItemModelMesher());
-		ModBlocks.InitClient(Minecraft.getMinecraft().getRenderItem().getItemModelMesher());
 	}
 
 	@Override
 	public void PostInit(FMLPostInitializationEvent event) {
+		// TODO Auto-generated method stub
 		super.PostInit(event);
 	}
-	
+
 }

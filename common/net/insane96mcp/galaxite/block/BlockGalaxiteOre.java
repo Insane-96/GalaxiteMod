@@ -1,23 +1,21 @@
 package net.insane96mcp.galaxite.block;
 
-import java.util.Random;
-
 import net.insane96mcp.galaxite.Galaxite;
-import net.insane96mcp.galaxite.init.ModItems;
 import net.insane96mcp.galaxite.lib.Names;
 import net.minecraft.block.BlockOre;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.util.ResourceLocation;
 
 public class BlockGalaxiteOre extends BlockOre{
 	
 	public BlockGalaxiteOre() {
 		super();
+		ResourceLocation location = new ResourceLocation(Galaxite.MOD_ID, Names.GALAXITE_ORE);
+		this.setRegistryName(location);
+		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+		this.setHardness(12.0f);
+		this.setResistance(33.3f);
+		this.setHarvestLevel("pickaxe", 3);
 	}
 	
 	@Override
