@@ -21,5 +21,6 @@ public class PlayerRespawn {
 		for (ItemSlot itemSlot : inventorySaved) {
 			playerMP.replaceItemInInventory(itemSlot.slot, itemSlot.itemStack);
 		}
+		playerData.clearInventorySaved();
 	}
 }

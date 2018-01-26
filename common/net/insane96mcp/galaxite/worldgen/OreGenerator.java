@@ -37,7 +37,5 @@ public class OreGenerator implements IWorldGenerator {
 				worldGenMinable.generate(world, random, chunkPos.add(random.nextInt(16), random.nextInt(128), random.nextInt(16)));
 			}
 		}
-	}
-
-	
+	}	
 }

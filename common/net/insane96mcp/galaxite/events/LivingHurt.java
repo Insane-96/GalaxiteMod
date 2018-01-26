@@ -27,12 +27,12 @@ public class LivingHurt {
 	
 	@SubscribeEvent
 	public static void EventLivingHurt(LivingHurtEvent event) {
-		PlayerDamageReduction(event);
+		//PlayerDamageReduction(event);
 		PlayerDamageDealt(event);
 	}
 	
 	public static void PlayerDamageReduction(LivingHurtEvent event) {
-		//May not work
+		/*//May not work
 		if (Properties.Armor.voidReducedDamage == 0.0f)
 			return;
 		
@@ -66,17 +66,13 @@ public class LivingHurt {
 	    
 	    if(materialsUsed == 0)
 	    	return;
-
-		System.out.println("before " + event.getAmount());
 		
 		float amount = event.getAmount();
 	    
     	float reductionPerMaterial = Properties.Armor.voidReducedDamage / 100f / 24f;
     	float percentageReduction = reductionPerMaterial * materialsUsed;
     	amount = amount * (1f - percentageReduction);
-        event.setAmount(amount);
-
-		System.out.println("after " + amount);
+        event.setAmount(amount);*/
 	}
 	
 	private static ItemStack[] galaxiteTools = new ItemStack[] {

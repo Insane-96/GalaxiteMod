@@ -1,11 +1,10 @@
 package net.insane96mcp.galaxite.capabilities;
 
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 
 public class PlayerData implements IPlayerData{
 
-	NonNullList<ItemSlot> inventorySaved;
+	NonNullList<ItemSlot> inventorySaved = NonNullList.create();
 	
 	@Override
 	public NonNullList<ItemSlot> getInventorySaved() {

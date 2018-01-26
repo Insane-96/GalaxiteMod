@@ -35,23 +35,15 @@ public class Properties {
 		public static int[] armorPoints;
 		public static int enchantability;
 		public static float toughness;
-
-		public static float voidReducedDamage;
-		public static int voidDamageArmor;
-		public static float voidDamageArmorChance;
 		
 		public static float saveItemsMaxChance;
 		public static int saveItemsDamagePerItemSaved;
 		
 		public static void Init() {
-			baseDurability = Config.LoadIntProperty("armor", "material_base_durability", "Base durability for Galaxite Armor\n(this value is multiplied by [11, 16, 15, 13] respectively from boots to helmet)\n", 22);
-			armorPoints = Config.LoadIntListProperty("armor", "material_armor_points", "Armor points for Galaxite Armor", new int[] {4, 6, 5, 3});
-			enchantability = Config.LoadIntProperty("armor", "material_enchantability", "Enchantability for Galaxite Armor", 9);
+			baseDurability = Config.LoadIntProperty("armor", "material_base_durability", "Base durability for Galaxite Armor\n(this value is multiplied by [13, 15, 16, 11] respectively from boots to helmet)\n", 33);
+			armorPoints = Config.LoadIntListProperty("armor", "material_armor_points", "Armor points for Galaxite Armor", new int[] {2, 5, 4, 2});
+			enchantability = Config.LoadIntProperty("armor", "material_enchantability", "Enchantability for Galaxite Armor", 10);
 			toughness = Config.LoadFloatProperty("armor", "material_toughness", "Toughness for Galaxite Armor", 0f);
-			
-			voidReducedDamage = Config.LoadFloatProperty("armor", "void_reduced_damage", "How much damage should armor reduce from the void", 50.0f);
-			voidDamageArmor = Config.LoadIntProperty("armor", "void_damage_armor", "How much an armor piece will get damaged when taking damage by the void (Only works when void_reduced_damage is more than 0)\n", 1);
-			voidDamageArmorChance = Config.LoadFloatProperty("armor", "void_damage_armor_chance", "Percentage chance for an armor piece to damage itself when valid_damage_armor is more than 0", 50.0f);
 			
 			saveItemsMaxChance = Config.LoadFloatProperty("armor", "save_items_max_chance", "Max Percentage Chance per item stack to be saved when dying into the void", 90.0f);
 			saveItemsDamagePerItemSaved = Config.LoadIntProperty("armor", "save_items_damage_per_item", "How much every piece of armor will be damaged per item stack saved from the Void", 2);

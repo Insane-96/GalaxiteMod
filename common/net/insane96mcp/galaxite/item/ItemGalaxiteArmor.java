@@ -36,11 +36,9 @@ public class ItemGalaxiteArmor extends ItemArmor{
 	public void addInformation(ItemStack stack, EntityPlayer player, List<String> tooltip, boolean advanced) {
 		if (GuiScreen.isShiftKeyDown()) {
 			tooltip.add(I18n.format(Tooltips.Armor.adv_info_save_inventory, Properties.Armor.saveItemsMaxChance, Properties.Armor.saveItemsDamagePerItemSaved));
-			tooltip.add(I18n.format(Tooltips.Armor.adv_info_damage_reduction, Properties.Armor.voidReducedDamage, Properties.Armor.voidDamageArmorChance, Properties.Armor.voidDamageArmor));
 		}
 		else {
 			tooltip.add(I18n.format(Tooltips.Armor.base_info_save_inventory));
-			tooltip.add(I18n.format(Tooltips.Armor.base_info_damage_reduction));
 			tooltip.add(I18n.format(Tooltips.General.shiftForMore));
 		}
 	}

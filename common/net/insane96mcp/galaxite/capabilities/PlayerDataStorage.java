@@ -15,13 +15,16 @@ public class PlayerDataStorage implements IStorage<IPlayerData> {
 	public NBTBase writeNBT(Capability<IPlayerData> capability, IPlayerData instance, EnumFacing side) {
 		NBTTagCompound tags = new NBTTagCompound();
 		saveAllItems(tags, instance.getInventorySaved());
+		System.out.println("Writing: " + tags);
 		return tags;
 	}
 
 	@Override
 	public void readNBT(Capability<IPlayerData> capability, IPlayerData instance, EnumFacing side, NBTBase nbt) {
 		NBTTagCompound tags = (NBTTagCompound)nbt;
-		loadAllItems(tags, instance.getInventorySaved());
+		NonNullList<ItemSlot> readList = NonNullList.create();
+		loadAllItems(tags, readList);
+		instance.clone(readList);
 	}
 	
 	private NBTTagCompound saveAllItems(NBTTagCompound tag, NonNullList<ItemSlot> itemSlots) {
@@ -55,12 +58,10 @@ public class PlayerDataStorage implements IStorage<IPlayerData> {
         for (int i = 0; i < nbttaglist.tagCount(); ++i)
         {
             NBTTagCompound nbttagcompound = nbttaglist.getCompoundTagAt(i);
-            int j = nbttagcompound.getByte("Slot") & 255;
+            byte slot = nbttagcompound.getByte("Slot");
 
-            if (j >= 0 && j < list.size())
-            {
-                list.add(new ItemSlot(new ItemStack(nbttagcompound), j));
-            }
+            ItemSlot toAdd = new ItemSlot(new ItemStack(nbttagcompound), slot);
+            list.add(toAdd);
         }
     }
 }

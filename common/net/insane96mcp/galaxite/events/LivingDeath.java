@@ -1,5 +1,6 @@
 package net.insane96mcp.galaxite.events;
 
+import net.insane96mcp.galaxite.Galaxite;
 import net.insane96mcp.galaxite.capabilities.IPlayerData;
 import net.insane96mcp.galaxite.capabilities.ItemSlot;
 import net.insane96mcp.galaxite.capabilities.PlayerDataProvider;
@@ -57,15 +58,31 @@ public class LivingDeath {
 		IPlayerData playerData = playerMP.getCapability(PlayerDataProvider.PLAYER_DATA_CAP, null);
 		
 		for (int i = 0; i < inventory.getSizeInventory(); i++) {
+			int slot = i;
 			ItemStack itemStack = inventory.getStackInSlot(i);
 			
 			if (itemStack.isEmpty())
 				continue;
 			
-			if (playerMP.world.rand.nextDouble() > chance)	
+			//Check for offhand slot
+			if (slot == 40)
+				slot = 99;
+			
+			//Check for Armor
+			else if (slot >= 36 && slot <= 39)
+				slot += 64;
+			
+			if (slot >= 100 && slot <= 103) {
+				playerData.addItemToInventorySaved(new ItemSlot(itemStack, slot));
+				continue;
+			}
+			
+			float rng = Galaxite.random.nextFloat();
+			
+			if (rng > chance)	
 				continue;
 			
-			playerData.addItemToInventorySaved(new ItemSlot(itemStack, i));
+			playerData.addItemToInventorySaved(new ItemSlot(itemStack, slot));
 			
 			for (ItemStack armorPiece : playerArmor) {
 		    	for (int armor = 0; armor < armorList.length; armor++) {
@@ -76,6 +93,5 @@ public class LivingDeath {
 				}
 			}
 		}
-		System.out.println("Maybe saved player data: " + playerData.getInventorySaved().size());
 	}
 }
