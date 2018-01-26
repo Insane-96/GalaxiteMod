@@ -1,0 +1,26 @@
+item.galaxite:galaxite.name=Galaxite
+item.galaxite:galaxite_pickaxe.name=Piccone di Galaxite
+item.galaxite:galaxite_axe.name=Ascia di Galaxite
+item.galaxite:galaxite_shovel.name=Pala di Galaxite
+item.galaxite:galaxite_hoe.name=Zappa di Galaxite
+item.galaxite:galaxite_sword.name=Spada di Galaxite
+
+item.galaxite:galaxite_helmet.name=Elmetto di Galaxite
+item.galaxite:galaxite_chestplate.name=Corazza di Galaxite
+item.galaxite:galaxite_leggings.name=Pantaloni di Galaxite
+item.galaxite:galaxite_boots.name=Stivali di Galaxite
+
+tile.galaxite:galaxite_block.name=Blocco di Galaxite
+tile.galaxite:galaxite_ore.name=Galaxite Grezza
+
+tooltip.general.shift_for_more=Premi MAIUSC per più informazioni
+
+tooltip.hoe.base_info=§dNell'end, non cambia nulla ... è una zappa
+
+tooltip.armor.base_info.save_inventory=§dCon questa armatura hai la possibilità di salvare parte del tuo inventario quando cadi nel vuoto.
+tooltip.armor.adv_info.save_inventory=§dCon l'armatura di Galaxite completa hai il §l%f%%§r§d di possibilità per ogni oggetto nel tuo inventario di non essere perso nel vuoto, ma ogni pezzo dell'armatura sarà danneggiate dei §l%d§r§d per ogni oggetto salvato (N.B. Una pila di blocchi conta come oggetto singolo)
+
+tooltip.tools.base_info.increased_damage=§dNell'end, quest'arma fa più danno
+tooltip.tools.base_info.increased_efficency=§dNell'end, questo attrezzo è più efficiente
+tooltip.tools.adv_info.increased_damage=§dQuando nell'end, il danno di quest'arma è aumentato del §l%f%%§r§d
+tooltip.tools.adv_info.increased_efficency=§dQuando nell'end, questo rompe i blocchi il §l%f%%§r§d più velocemente
