@@ -1,17 +1,11 @@
 package net.insane96mcp.galaxite.events;
 
-import com.ibm.icu.impl.ICURWLock.Stats;
-
 import net.insane96mcp.galaxite.init.ModItems;
 import net.insane96mcp.galaxite.lib.Properties;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -84,7 +78,7 @@ public class LivingHurt {
 	};
 	
 	public static void PlayerDamageDealt(LivingHurtEvent event) {
-		Entity sourceEntity = event.getSource().getEntity();
+		Entity sourceEntity = event.getSource().getTrueSource();
 		if (!(sourceEntity instanceof EntityPlayerMP))
 			return;
 		

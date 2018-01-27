@@ -8,9 +8,8 @@ import net.minecraft.block.state.pattern.BlockMatcher;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.feature.WorldGenMinable;
+import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class OreGenerator implements IWorldGenerator {
@@ -22,9 +21,8 @@ public class OreGenerator implements IWorldGenerator {
 	}
 	
 	@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator,
-			IChunkProvider chunkProvider) {
-		
+	public void generate(Random random, int chunkX, int chunkZ, World world,
+			IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 		if ((chunkX < 16 && chunkX > -16) && (chunkZ < 16 && chunkZ > -16) && !Properties.OreGeneration.generateOnMainIsland)
 			return;
 		
@@ -37,5 +35,6 @@ public class OreGenerator implements IWorldGenerator {
 				worldGenMinable.generate(world, random, chunkPos.add(random.nextInt(16), random.nextInt(128), random.nextInt(16)));
 			}
 		}
+		
 	}	
 }

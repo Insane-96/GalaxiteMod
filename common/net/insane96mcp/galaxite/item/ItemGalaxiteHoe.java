@@ -6,10 +6,12 @@ import net.insane96mcp.galaxite.Galaxite;
 import net.insane96mcp.galaxite.lib.Names;
 import net.insane96mcp.galaxite.lib.Tooltips;
 import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 public class ItemGalaxiteHoe extends ItemHoe{
 	public ItemGalaxiteHoe(String name, ToolMaterial material, CreativeTabs tab) {
@@ -24,7 +26,7 @@ public class ItemGalaxiteHoe extends ItemHoe{
 	}
 	
 	@Override
-	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
+	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		tooltip.add(I18n.format(Tooltips.Hoe.base_info));
 	}
 }

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "galaxite:galaxite_block"
+    }
+  ],
+  "result": {
+    "item": "galaxite:galaxite",
+	"count": 9
+  }
+}

@@ -32,7 +32,6 @@ public class CommonProxy {
 	
 	public void Init(FMLInitializationEvent event) {
 		ModItems.PostInit();
-		ModBlocks.PostInit();
 		MinecraftForge.EVENT_BUS.register(CapabilityHandler.class);
 		MinecraftForge.EVENT_BUS.register(LivingDeath.class);
 		MinecraftForge.EVENT_BUS.register(LivingHurt.class);

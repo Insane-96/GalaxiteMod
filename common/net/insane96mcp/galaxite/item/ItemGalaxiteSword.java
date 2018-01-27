@@ -8,10 +8,12 @@ import net.insane96mcp.galaxite.lib.Properties;
 import net.insane96mcp.galaxite.lib.Tooltips;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.world.World;
 
 public class ItemGalaxiteSword extends ItemSword{
 	public ItemGalaxiteSword(String name, ToolMaterial material, CreativeTabs tab) {
@@ -26,7 +28,7 @@ public class ItemGalaxiteSword extends ItemSword{
 	}
 
 	@Override
-	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
+	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		if (GuiScreen.isShiftKeyDown()) {
 			tooltip.add(I18n.format(Tooltips.Tools.adv_info_increased_damage, Properties.Tool.endDamageBonus));
 		}

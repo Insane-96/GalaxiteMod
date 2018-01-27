@@ -1,17 +1,18 @@
 package net.insane96mcp.galaxite.init;
 
+import java.util.ArrayList;
+
 import net.insane96mcp.galaxite.Galaxite;
 import net.insane96mcp.galaxite.block.BlockGalaxite;
 import net.insane96mcp.galaxite.block.BlockGalaxiteOre;
 import net.insane96mcp.galaxite.lib.Names;
 import net.insane96mcp.galaxite.worldgen.OreGenerator;
+import net.minecraft.block.Block;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -21,31 +22,15 @@ public class ModBlocks {
 	
 	public static BlockGalaxite galaxiteBlock;
 	public static BlockGalaxiteOre galaxiteOre;
+	
+	public static ArrayList<Block> BLOCKS = new ArrayList<Block>();
 	public static void Init() {
 		galaxiteBlock = new BlockGalaxite();
-		GameRegistry.register(galaxiteBlock);
-		GameRegistry.register(new ItemBlock(galaxiteBlock), galaxiteBlock.getRegistryName());
+		BLOCKS.add(galaxiteBlock);
 
 		galaxiteOre = new BlockGalaxiteOre();
-		GameRegistry.register(galaxiteOre);
-		GameRegistry.register(new ItemBlock(galaxiteOre), galaxiteOre.getRegistryName());
-		GameRegistry.registerWorldGenerator(new OreGenerator(), 123);
-	}
-	
-	public static void PostInit() {
-		GameRegistry.addRecipe(new ItemStack(galaxiteBlock, 1), "xxx", "xxx", "xxx", 'x', ModItems.galaxiteItem);
-	}
-	
-	@SideOnly(Side.CLIENT)
-	public static void InitClient(ItemModelMesher mesher) {
-		Item item = Item.getItemFromBlock(galaxiteBlock);
-		ModelResourceLocation model = new ModelResourceLocation(Galaxite.RESOURCE_PREFIX + Names.GALAXITE_BLOCK);
-		ModelLoader.registerItemVariants(item, model);
-		mesher.register(item, 0, model);
+		BLOCKS.add(galaxiteOre);
 		
-		item = Item.getItemFromBlock(galaxiteOre);
-		model = new ModelResourceLocation(Galaxite.RESOURCE_PREFIX + Names.GALAXITE_ORE);
-		ModelLoader.registerItemVariants(item, model);
-		mesher.register(item, 0, model);
+		GameRegistry.registerWorldGenerator(new OreGenerator(), 123);
 	}
 }

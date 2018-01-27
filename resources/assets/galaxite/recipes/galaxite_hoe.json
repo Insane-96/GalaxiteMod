@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "VV",
+    "S ",
+    "S "
+  ],
+  "key": {
+    "V": {
+      "item": "galaxite:galaxite"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "galaxite:galaxite_hoe"
+  }
+}

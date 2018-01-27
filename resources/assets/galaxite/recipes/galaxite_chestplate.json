@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "V V",
+    "VVV",
+	"VVV"
+  ],
+  "key": {
+    "V": {
+      "item": "galaxite:galaxite"
+    }
+  },
+  "result": {
+    "item": "galaxite:galaxite_chestplate"
+  }
+}

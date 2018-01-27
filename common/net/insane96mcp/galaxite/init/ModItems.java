@@ -1,5 +1,7 @@
 package net.insane96mcp.galaxite.init;
 
+import java.util.ArrayList;
+
 import net.insane96mcp.galaxite.Galaxite;
 import net.insane96mcp.galaxite.item.ItemGalaxite;
 import net.insane96mcp.galaxite.item.ItemGalaxiteArmor;
@@ -10,12 +12,12 @@ import net.insane96mcp.galaxite.item.ItemGalaxiteShovel;
 import net.insane96mcp.galaxite.item.ItemGalaxiteSword;
 import net.insane96mcp.galaxite.item.material.ModMaterial;
 import net.insane96mcp.galaxite.lib.Names;
-import net.insane96mcp.galaxite.lib.Properties;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -37,95 +39,41 @@ public class ModItems {
 	public static ItemGalaxiteArmor galaxiteLeggingsItem;
 	public static ItemGalaxiteArmor galaxiteBootsItem;
 	
+	public static ArrayList<Item> ITEMS = new ArrayList<Item>();
+	
 	public static void Init() {
 		galaxiteItem = new ItemGalaxite(Names.GALAXITE_ITEM, CreativeTabs.MATERIALS);
-		GameRegistry.register(galaxiteItem);
+		ITEMS.add(galaxiteItem);
 
 		galaxitePickaxeItem = new ItemGalaxitePickaxe(Names.GALAXITE_PICKAXE, ModMaterial.Tool, CreativeTabs.TOOLS);
-		GameRegistry.register(galaxitePickaxeItem);
+		ITEMS.add(galaxitePickaxeItem);
 
 		galaxiteShovelItem = new ItemGalaxiteShovel(Names.GALAXITE_SHOVEL, ModMaterial.Tool, CreativeTabs.TOOLS);
-		GameRegistry.register(galaxiteShovelItem);
+		ITEMS.add(galaxiteShovelItem);
 
 		galaxiteAxeItem = new ItemGalaxiteAxe(Names.GALAXITE_AXE, ModMaterial.Tool, CreativeTabs.TOOLS);
-		GameRegistry.register(galaxiteAxeItem);
+		ITEMS.add(galaxiteAxeItem);
 		
 		galaxiteHoeItem = new ItemGalaxiteHoe(Names.GALAXITE_HOE, ModMaterial.Tool, CreativeTabs.TOOLS);
-		GameRegistry.register(galaxiteHoeItem);
+		ITEMS.add(galaxiteHoeItem);
 		
 		galaxiteSwordItem = new ItemGalaxiteSword(Names.GALAXITE_SWORD, ModMaterial.Tool, CreativeTabs.COMBAT);
-		GameRegistry.register(galaxiteSwordItem);
+		ITEMS.add(galaxiteSwordItem);
 		
 		galaxiteHelmetItem = new ItemGalaxiteArmor(Names.GALAXITE_HELMET, ModMaterial.Armor, 0, EntityEquipmentSlot.HEAD);
-		GameRegistry.register(galaxiteHelmetItem);
+		ITEMS.add(galaxiteHelmetItem);
 
 		galaxiteChestplateItem = new ItemGalaxiteArmor(Names.GALAXITE_CHESTPLATE, ModMaterial.Armor, 0, EntityEquipmentSlot.CHEST);
-		GameRegistry.register(galaxiteChestplateItem);
+		ITEMS.add(galaxiteChestplateItem);
 
 		galaxiteLeggingsItem = new ItemGalaxiteArmor(Names.GALAXITE_LEGGINGS, ModMaterial.Armor, 1, EntityEquipmentSlot.LEGS);
-		GameRegistry.register(galaxiteLeggingsItem);
+		ITEMS.add(galaxiteLeggingsItem);
 
 		galaxiteBootsItem = new ItemGalaxiteArmor(Names.GALAXITE_BOOTS, ModMaterial.Armor, 0, EntityEquipmentSlot.FEET);
-		GameRegistry.register(galaxiteBootsItem);
+		ITEMS.add(galaxiteBootsItem);
 	}
 	
 	public static void PostInit() {
-		GameRegistry.addShapelessRecipe(new ItemStack(galaxiteItem, 9), ModBlocks.galaxiteBlock);
 		GameRegistry.addSmelting(ModBlocks.galaxiteOre, new ItemStack(galaxiteItem), 3.0f);
-
-		GameRegistry.addRecipe(new ItemStack(galaxitePickaxeItem), "vvv", " s ", " s ", 'v', galaxiteItem, 's', Items.STICK);
-		GameRegistry.addRecipe(new ItemStack(galaxiteShovelItem), "v", "s", "s", 'v', galaxiteItem, 's', Items.STICK);
-		GameRegistry.addRecipe(new ItemStack(galaxiteAxeItem), "vv", "sv", "s ", 'v', galaxiteItem, 's', Items.STICK);
-		GameRegistry.addRecipe(new ItemStack(galaxiteHoeItem), "vv", "s ", "s ", 'v', galaxiteItem, 's', Items.STICK);
-		GameRegistry.addRecipe(new ItemStack(galaxiteSwordItem), "v", "v", "s", 'v', galaxiteItem, 's', Items.STICK);
-
-		GameRegistry.addRecipe(new ItemStack(galaxiteHelmetItem), "vvv", "v v", 'v', galaxiteItem);
-		GameRegistry.addRecipe(new ItemStack(galaxiteChestplateItem), "v v", "vvv", "vvv", 'v', galaxiteItem);
-		GameRegistry.addRecipe(new ItemStack(galaxiteLeggingsItem), "vvv", "v v", "v v", 'v', galaxiteItem);
-		GameRegistry.addRecipe(new ItemStack(galaxiteBootsItem), "v v", "v v", 'v', galaxiteItem);
-	}
-	
-	@SideOnly(Side.CLIENT)
-	public static void InitClient(ItemModelMesher mesher) {
-		ModelResourceLocation modelResourceLocation = new ModelResourceLocation(Galaxite.RESOURCE_PREFIX + Names.GALAXITE_ITEM);
-		ModelLoader.registerItemVariants(galaxiteItem, modelResourceLocation);
-		mesher.register(galaxiteItem, 0, modelResourceLocation);
-		
-		modelResourceLocation = new ModelResourceLocation(Galaxite.RESOURCE_PREFIX + Names.GALAXITE_PICKAXE);
-		ModelLoader.registerItemVariants(galaxitePickaxeItem, modelResourceLocation);
-		mesher.register(galaxitePickaxeItem, 0, modelResourceLocation);
-		
-		modelResourceLocation = new ModelResourceLocation(Galaxite.RESOURCE_PREFIX + Names.GALAXITE_SHOVEL);
-		ModelLoader.registerItemVariants(galaxiteShovelItem, modelResourceLocation);
-		mesher.register(galaxiteShovelItem, 0, modelResourceLocation);
-		
-		modelResourceLocation = new ModelResourceLocation(Galaxite.RESOURCE_PREFIX + Names.GALAXITE_AXE);
-		ModelLoader.registerItemVariants(galaxiteAxeItem, modelResourceLocation);
-		mesher.register(galaxiteAxeItem, 0, modelResourceLocation);
-		
-		modelResourceLocation = new ModelResourceLocation(Galaxite.RESOURCE_PREFIX + Names.GALAXITE_HOE);
-		ModelLoader.registerItemVariants(galaxiteHoeItem, modelResourceLocation);
-		mesher.register(galaxiteHoeItem, 0, modelResourceLocation);
-		
-		modelResourceLocation = new ModelResourceLocation(Galaxite.RESOURCE_PREFIX + Names.GALAXITE_SWORD);
-		ModelLoader.registerItemVariants(galaxiteSwordItem, modelResourceLocation);
-		mesher.register(galaxiteSwordItem, 0, modelResourceLocation);
-
-		
-		modelResourceLocation = new ModelResourceLocation(Galaxite.RESOURCE_PREFIX + Names.GALAXITE_HELMET);
-		ModelLoader.registerItemVariants(galaxiteHelmetItem, modelResourceLocation);
-		mesher.register(galaxiteHelmetItem, 0, modelResourceLocation);
-		
-		modelResourceLocation = new ModelResourceLocation(Galaxite.RESOURCE_PREFIX + Names.GALAXITE_CHESTPLATE);
-		ModelLoader.registerItemVariants(galaxiteChestplateItem, modelResourceLocation);
-		mesher.register(galaxiteChestplateItem, 0, modelResourceLocation);
-		
-		modelResourceLocation = new ModelResourceLocation(Galaxite.RESOURCE_PREFIX + Names.GALAXITE_LEGGINGS);
-		ModelLoader.registerItemVariants(galaxiteLeggingsItem, modelResourceLocation);
-		mesher.register(galaxiteLeggingsItem, 0, modelResourceLocation);
-		
-		modelResourceLocation = new ModelResourceLocation(Galaxite.RESOURCE_PREFIX + Names.GALAXITE_BOOTS);
-		ModelLoader.registerItemVariants(galaxiteBootsItem, modelResourceLocation);
-		mesher.register(galaxiteBootsItem, 0, modelResourceLocation);
 	}
 }
