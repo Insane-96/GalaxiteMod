@@ -15,7 +15,6 @@ public class PlayerDataStorage implements IStorage<IPlayerData> {
 	public NBTBase writeNBT(Capability<IPlayerData> capability, IPlayerData instance, EnumFacing side) {
 		NBTTagCompound tags = new NBTTagCompound();
 		saveAllItems(tags, instance.getInventorySaved());
-		System.out.println("Writing: " + tags);
 		return tags;
 	}
 
