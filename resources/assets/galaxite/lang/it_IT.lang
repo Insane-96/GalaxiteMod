@@ -23,4 +23,4 @@ tooltip.armor.adv_info.save_inventory=§dCon l'armatura di Galaxite completa hai
 tooltip.tools.base_info.increased_damage=§dNell'end, quest'arma fa più danno
 tooltip.tools.base_info.increased_efficency=§dNell'end, questo attrezzo è più efficiente
 tooltip.tools.adv_info.increased_damage=§dQuando nell'end, il danno di quest'arma è aumentato del §l%f%%§r§d
-tooltip.tools.adv_info.increased_efficency=§dQuando nell'end, questo rompe i blocchi il §l%f%%§r§d più velocemente
+tooltip.tools.adv_info.increased_efficency=§dQuando nell'end, questo attrezzo rompe i blocchi il §l%f%%§r§d più velocemente
