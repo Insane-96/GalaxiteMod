@@ -30,14 +30,18 @@ public class ItemGalaxitePickaxe extends ItemPickaxe {
 
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		if (GuiScreen.isShiftKeyDown()) {
+		if (!Properties.General.showMoreInfo)
+			return;
+		
+		if (GuiScreen.isShiftKeyDown() && Properties.General.showDetailedInfo) {
 			tooltip.add(I18n.format(Tooltips.Tools.adv_info_increased_efficency, Properties.Tool.endEfficencyBonus));
 			tooltip.add(I18n.format(Tooltips.Tools.adv_info_increased_damage, Properties.Tool.endDamageBonus));
 		}
 		else {
 			tooltip.add(I18n.format(Tooltips.Tools.base_info_increased_efficency));
 			tooltip.add(I18n.format(Tooltips.Tools.base_info_increased_damage));
-			tooltip.add(I18n.format(Tooltips.General.shiftForMore));
+			if (Properties.General.showDetailedInfo)
+				tooltip.add(I18n.format(Tooltips.General.shiftForMore));
 		}
 	}
 }

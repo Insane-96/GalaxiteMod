@@ -17,7 +17,7 @@ tooltip.general.shift_for_more=Premi MAIUSC per più informazioni
 
 tooltip.hoe.base_info=§dNell'end, non cambia nulla ... è una zappa
 
-tooltip.armor.base_info.save_inventory=§dCon questa armatura hai la possibilità di salvare parte del tuo inventario quando cadi nel vuoto.
+tooltip.armor.base_info.save_inventory=§dCon questa armatura hai la possibilità di salvare parte del tuo inventario quando cadi nel vuoto. Più pezzi di armatura vuol dire più possibilità di salvare gli oggetti nel tuo inventario
 tooltip.armor.adv_info.save_inventory=§dCon l'armatura di Galaxite completa hai il §l%f%%§r§d di possibilità per ogni oggetto nel tuo inventario di non essere perso nel vuoto, ma ogni pezzo dell'armatura sarà danneggiate dei §l%d§r§d per ogni oggetto salvato (N.B. Una pila di blocchi conta come oggetto singolo)
 
 tooltip.tools.base_info.increased_damage=§dNell'end, quest'arma fa più danno

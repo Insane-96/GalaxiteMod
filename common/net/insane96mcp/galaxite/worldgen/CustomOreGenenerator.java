@@ -36,24 +36,23 @@ public class CustomOreGenenerator extends WorldGenerator
 
     public boolean generate(World worldIn, Random rand, BlockPos position)
     {
-        Block blockposYUp = worldIn.getBlockState(position.add(0, 1, 0)).getBlock();
-        Block blockposYDown = worldIn.getBlockState(position.add(0, -1, 0)).getBlock();
-        Block blockposXUp = worldIn.getBlockState(position.add(1, 0, 0)).getBlock();
-        Block blockposXDown = worldIn.getBlockState(position.add(-1, 0, 0)).getBlock();
-        Block blockposZUp = worldIn.getBlockState(position.add(0, 0, 1)).getBlock();
-        Block blockposZDown = worldIn.getBlockState(position.add(0, 0, -1)).getBlock();
-        if (
-        	((blockposXUp instanceof BlockAir || 
-        	blockposXDown instanceof BlockAir || 
-        	blockposYUp instanceof BlockAir || 
-        	blockposYDown instanceof BlockAir || 
-        	blockposZUp instanceof BlockAir || 
-        	blockposZDown instanceof BlockAir) &&
-        	Properties.OreGeneration.onlyNearAir) ||
-        	!Properties.OreGeneration.onlyNearAir
-        ) {
-    	
-	        float f = rand.nextFloat() * (float)Math.PI;
+    	Block blockposYUp = worldIn.getBlockState(position.add(0, 1, 0)).getBlock();
+    	Block blockposYDown = worldIn.getBlockState(position.add(0, -1, 0)).getBlock();
+    	Block blockposXUp = worldIn.getBlockState(position.add(1, 0, 0)).getBlock();
+    	Block blockposXDown = worldIn.getBlockState(position.add(-1, 0, 0)).getBlock();
+    	Block blockposZUp = worldIn.getBlockState(position.add(0, 0, 1)).getBlock();
+    	Block blockposZDown = worldIn.getBlockState(position.add(0, 0, -1)).getBlock();
+    	if (
+    		((blockposXUp instanceof BlockAir || 
+    		blockposXDown instanceof BlockAir || 
+    		blockposYUp instanceof BlockAir || 
+    		blockposYDown instanceof BlockAir || 
+    		blockposZUp instanceof BlockAir || 
+    		blockposZDown instanceof BlockAir) &&
+    		Properties.OreGeneration.onlyNearAir) ||
+    		!Properties.OreGeneration.onlyNearAir
+    	) {
+	    	float f = rand.nextFloat() * (float)Math.PI;
 	        double d0 = (double)((float)(position.getX() + 8) + MathHelper.sin(f) * (float)this.numberOfBlocks / 8.0F);
 	        double d1 = (double)((float)(position.getX() + 8) - MathHelper.sin(f) * (float)this.numberOfBlocks / 8.0F);
 	        double d2 = (double)((float)(position.getZ() + 8) + MathHelper.cos(f) * (float)this.numberOfBlocks / 8.0F);
@@ -96,21 +95,21 @@ public class CustomOreGenenerator extends WorldGenerator
 	                                if (d12 * d12 + d13 * d13 + d14 * d14 < 1.0D)
 	                                {
 	                                    BlockPos blockpos = new BlockPos(l1, i2, j2);
+	
 	                                    IBlockState state = worldIn.getBlockState(blockpos);
 	                                    if (state.getBlock().isReplaceableOreGen(state, worldIn, blockpos, this.predicate))
 	                                    {
 	                                        worldIn.setBlockState(blockpos, this.oreBlock, 2);
 	                                    }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        return true;
+	                                }
+	                            }
+	                        }
+	                    }
+	                }
+	            }
+	        }
+    	}
+	    return true;
     }
 
     static class StonePredicate implements Predicate<IBlockState>

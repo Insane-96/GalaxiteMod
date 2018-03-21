@@ -32,7 +32,7 @@ public class OreGenerator implements IWorldGenerator {
 
 		for (int i = 0; i < Properties.OreGeneration.veinPerChunk; i++) {
 			if (dimension == 1) {
-				worldGenMinable.generate(world, random, chunkPos.add(random.nextInt(16), random.nextInt(128), random.nextInt(16)));
+				worldGenMinable.generate(world, random, chunkPos.add(random.nextInt(12) + 2, random.nextInt(128), random.nextInt(12) + 2));
 			}
 		}
 		

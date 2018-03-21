@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.insane96mcp.galaxite.Galaxite;
 import net.insane96mcp.galaxite.lib.Names;
+import net.insane96mcp.galaxite.lib.Properties;
 import net.insane96mcp.galaxite.lib.Tooltips;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
@@ -27,6 +28,9 @@ public class ItemGalaxiteHoe extends ItemHoe{
 	
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+		if (!Properties.General.showMoreInfo)
+			return;
+		
 		tooltip.add(I18n.format(Tooltips.Hoe.base_info));
 	}
 }

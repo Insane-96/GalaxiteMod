@@ -104,6 +104,6 @@ public class LivingHurt {
 		
 		float damageDealt = event.getAmount();
 
-		event.setAmount(damageDealt * (Properties.Tool.endDamageBonus / 100f));
+		event.setAmount(damageDealt + damageDealt * (Properties.Tool.endDamageBonus / 100f));
 	}
 }

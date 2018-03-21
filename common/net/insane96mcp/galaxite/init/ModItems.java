@@ -2,7 +2,6 @@ package net.insane96mcp.galaxite.init;
 
 import java.util.ArrayList;
 
-import net.insane96mcp.galaxite.Galaxite;
 import net.insane96mcp.galaxite.item.ItemGalaxite;
 import net.insane96mcp.galaxite.item.ItemGalaxiteArmor;
 import net.insane96mcp.galaxite.item.ItemGalaxiteAxe;
@@ -12,17 +11,11 @@ import net.insane96mcp.galaxite.item.ItemGalaxiteShovel;
 import net.insane96mcp.galaxite.item.ItemGalaxiteSword;
 import net.insane96mcp.galaxite.item.material.ModMaterial;
 import net.insane96mcp.galaxite.lib.Names;
-import net.minecraft.client.renderer.ItemModelMesher;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModItems {
 	
