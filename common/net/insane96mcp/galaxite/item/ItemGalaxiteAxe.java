@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 public class ItemGalaxiteAxe extends ItemAxe{
 	
 	public ItemGalaxiteAxe(String name, ToolMaterial material, CreativeTabs tab) {
-		super(material, 9, 0.95f);
+		super(material, 9, -3.05f);
 		setRegistryName(name);
 		setCreativeTab(tab);
 	}
