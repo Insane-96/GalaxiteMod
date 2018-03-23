@@ -1,0 +1,26 @@
+item.galaxite:galaxite.name=Галактит
+item.galaxite:galaxite_pickaxe.name=Галактитовая Кирка
+item.galaxite:galaxite_axe.name=Галактитовый Топор
+item.galaxite:galaxite_shovel.name=Галактитовая Лопата
+item.galaxite:galaxite_hoe.name=Галактитовая Мотыга
+item.galaxite:galaxite_sword.name=Галактитовый Меч
+
+item.galaxite:galaxite_helmet.name=Галактитовый Шлем
+item.galaxite:galaxite_chestplate.name=Галактитовый Нагрудник
+item.galaxite:galaxite_leggings.name=Галактитовые Поножи
+item.galaxite:galaxite_boots.name=Галактитовые Ботинки
+
+tile.galaxite:galaxite_block.name=Галактитовый Блок
+tile.galaxite:galaxite_ore.name=Галактитовая Руда
+
+tooltip.general.shift_for_more=Зажмите Shift чтобы узнать больше...
+
+tooltip.hoe.base_info=§dДаже на "краю" ничего не меняется... это мотыга
+
+tooltip.armor.base_info.save_inventory=§dС этой бронёй у вас есть шанс сохранить содержимое инвентаря при смерти от пустоты
+tooltip.armor.adv_info.save_inventory=§dС полным набором галактитовой брони у каждого предмета в инвентаре есть §l%f%%§r§d шанс не быть утерянным в пустоте, но каждый элемент брони будет повреждён на §l%d§r§d за каждый сохранённый предмет (Прим. Стак считается за один предмет)
+
+tooltip.tools.base_info.increased_damage=§dНаносит больше урона в Краю
+tooltip.tools.base_info.increased_efficency=§dВ Краю копает намного быстрее
+tooltip.tools.adv_info.increased_damage=§dВ Краю урон от этого оружия увеличен на §l%f%%§r§d
+tooltip.tools.adv_info.increased_efficency=§dВ Краю этот инструмент копает на §l%f%%§r§d быстрее
