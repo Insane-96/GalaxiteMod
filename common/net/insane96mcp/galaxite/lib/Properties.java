@@ -69,7 +69,7 @@ public class Properties {
 		
 		public static void Init() {
 			orePerVein = Config.LoadIntProperty("ore_generation", "ore_per_vein", "Ores Generated Per Vein", 8);
-			veinPerChunk = Config.LoadIntProperty("ore_generation", "vein_per_chunk", "Veins that try to spawn in a chunk", 10);
+			veinPerChunk = Config.LoadIntProperty("ore_generation", "vein_per_chunk", "Veins that try to spawn in a chunk", 7);
 			onlyNearAir = Config.LoadBoolProperty("ore_generation", "only_near_air", "Should Veins only generate near Air (so mining will lead no ores)", true);
 			generateOnMainIsland = Config.LoadBoolProperty("ore_generation", "generate_on_main_island", "Should Veins generate in the main island (x: 0, z: 0, where the portal is)", false);
 		}
