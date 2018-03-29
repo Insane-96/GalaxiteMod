@@ -1,0 +1,26 @@
+item.galaxite:galaxite.name=Galaxite
+item.galaxite:galaxite_pickaxe.name=Pico de Galaxite
+item.galaxite:galaxite_axe.name=Hacha de Galaxite
+item.galaxite:galaxite_shovel.name=Pala de Galaxite
+item.galaxite:galaxite_hoe.name=Azada de Galaxite
+item.galaxite:galaxite_sword.name=Espada de Galaxite
+
+item.galaxite:galaxite_helmet.name=Casco de Galaxite
+item.galaxite:galaxite_chestplate.name=Peto de Galaxite
+item.galaxite:galaxite_leggings.name=Grebas de Galaxite
+item.galaxite:galaxite_boots.name=Botas de Galaxite
+
+tile.galaxite:galaxite_block.name=Bloque de Galaxite
+tile.galaxite:galaxite_ore.name=Mena de Galaxite
+
+tooltip.general.shift_for_more=Presione SHIFT para obtener más información
+
+tooltip.hoe.base_info=§dCuando estás en el END, nada cambia ... solo es una azada
+
+tooltip.armor.base_info.save_inventory=§dCon esta armadura tienes un chance de recuperar parte de tu inventario cuando mueras en el vacío.
+tooltip.armor.adv_info.save_inventory=§dCon la armadura completa de Galaxite tienes §l%f%%§r§d de posibilidad de que cada objeto en tu inventario no se pierda en el vacío, pero cada armadura será dañada por §l%d§r§d por cada item recuperado (P.D. Los "stacks" cuentan como un solo objeto)
+
+tooltip.tools.base_info.increased_damage=§dCuando estás en el END, esta arma hace mas daño
+tooltip.tools.base_info.increased_efficency=§dCuando estás en el END la herramienta es más rápida
+tooltip.tools.adv_info.increased_damage=§dCuando estás en el END con esta herramienta el daño es incrementado en §l%f%%§r§d
+tooltip.tools.adv_info.increased_efficency=§dCuando estás en el END con esta herramienta se vuelve §l%f%%§r§d más rápida
