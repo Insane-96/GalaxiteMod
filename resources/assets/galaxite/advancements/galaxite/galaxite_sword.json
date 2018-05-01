@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "galaxite:galaxite_sword"
+        },
+        "title": {
+            "translate": "advancements.galaxite.sword.title"
+        },
+        "description": {
+            "translate": "advancements.galaxite.sword.description"
+        }
+    },
+    "parent": "galaxite:galaxite/galaxite",
+    "criteria": {
+        "galaxite_sword": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "galaxite:galaxite_sword"
+                    }
+                ]
+            }
+        }
+    }
+}

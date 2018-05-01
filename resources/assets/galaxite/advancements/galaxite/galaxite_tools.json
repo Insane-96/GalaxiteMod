@@ -1,0 +1,56 @@
+{
+    "display": {
+        "icon": {
+            "item": "galaxite:galaxite_pickaxe"
+        },
+        "title": {
+            "translate": "advancements.galaxite.tools.title"
+        },
+        "description": {
+            "translate": "advancements.galaxite.tools.description"
+        }
+    },
+    "parent": "galaxite:galaxite/galaxite",
+    "criteria": {
+        "galaxite_pickaxe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "galaxite:galaxite_pickaxe"
+                    }
+                ]
+            }
+        },
+        "galaxite_shovel": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "galaxite:galaxite_shovel"
+                    }
+                ]
+            }
+        },
+        "galaxite_axe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "galaxite:galaxite_axe"
+                    }
+                ]
+            }
+        },
+        "galaxite_hoe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "galaxite:galaxite_hoe"
+                    }
+                ]
+            }
+        }
+    }
+}

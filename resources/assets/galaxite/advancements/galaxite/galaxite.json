@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "galaxite:galaxite"
+        },
+        "title": {
+            "translate": "advancements.galaxite.galaxite.title"
+        },
+        "description": {
+            "translate": "advancements.galaxite.galaxite.description"
+        }
+    },
+    "parent": "galaxite:galaxite/galaxite_ore",
+    "criteria": {
+        "galaxite": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "galaxite:galaxite"
+                    }
+                ]
+            }
+        }
+    }
+}

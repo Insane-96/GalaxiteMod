@@ -24,3 +24,21 @@ tooltip.tools.base_info.increased_damage=§dIn the End, this weapon deals more d
 tooltip.tools.base_info.increased_efficency=§dIn the End the tool is more efficient
 tooltip.tools.adv_info.increased_damage=§dWhen in the End with this tool damage is increased by §l%f%%§r§d
 tooltip.tools.adv_info.increased_efficency=§dWhen in the End this tool is §l%f%%§r§d more efficient
+
+advancements.galaxite.root.title=Galaxite Mod
+advancements.galaxite.root.description=The beginning of anti-void
+
+advancements.galaxite.ore.title=Such particles, much waoh
+advancements.galaxite.ore.description=Obtain a Galaxite Ore. Can be found in the outer islands of the End
+
+advancements.galaxite.galaxite.title=Purple like the End?
+advancements.galaxite.galaxite.description=Smelt Galaxite Ore to get a Galaxite gem
+
+advancements.galaxite.sword.title=End-slainer
+advancements.galaxite.sword.description=Get a Galaxite Sword
+
+advancements.galaxite.tools.title=Let's destoy this End Stone
+advancements.galaxite.tools.description=Get every tool made of Galaxite
+
+advancements.galaxite.armor.title=Anti-Void
+advancements.galaxite.armor.description=Obtain a full set of Galaxite Armor

@@ -1,0 +1,56 @@
+{
+    "display": {
+        "icon": {
+            "item": "galaxite:galaxite_chestplate"
+        },
+        "title": {
+            "translate": "advancements.galaxite.armor.title"
+        },
+        "description": {
+            "translate": "advancements.galaxite.armor.description"
+        }
+    },
+    "parent": "galaxite:galaxite/galaxite",
+    "criteria": {
+        "galaxite_helmet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "galaxite:galaxite_helmet"
+                    }
+                ]
+            }
+        },
+        "galaxite_chestplate": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "galaxite:galaxite_chestplate"
+                    }
+                ]
+            }
+        },
+        "galaxite_leggings": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "galaxite:galaxite_leggings"
+                    }
+                ]
+            }
+        },
+        "galaxite_boots": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "galaxite:galaxite_boots"
+                    }
+                ]
+            }
+        }
+    }
+}

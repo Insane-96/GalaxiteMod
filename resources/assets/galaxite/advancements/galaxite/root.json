@@ -1,0 +1,53 @@
+{
+    "display": {
+        "icon": {
+            "item": "galaxite:galaxite_block"
+        },
+        "title": {
+            "translate": "advancements.galaxite.root.title"
+        },
+        "description": {
+            "translate": "advancements.galaxite.root.description"
+        },
+        "background": "galaxite:textures/blocks/galaxite_ore.png",
+		"show_toast": true,
+		"announce_to_chat": false
+    },
+    "criteria": {
+        "positive": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "dimension": "the_end",
+				"position": {
+					"x": {
+						"min": 500,
+						"max": 30000000
+					},
+					"z": {
+						"min": 500,
+						"max": 30000000
+					}
+				}
+            }
+        },
+        "negative": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "dimension": "the_end",
+				"position": {
+					"x": {
+						"min": -30000000,
+						"max": -500
+					},
+					"z": {
+						"min": -30000000,
+						"max": -500
+					}
+				}
+            }
+        }
+    },
+	"requirements": [
+		[ "positive", "negative" ]
+	]
+}
