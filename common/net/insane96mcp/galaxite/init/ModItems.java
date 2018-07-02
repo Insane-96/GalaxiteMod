@@ -16,6 +16,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class ModItems {
 	
@@ -34,7 +35,7 @@ public class ModItems {
 	
 	public static ArrayList<Item> ITEMS = new ArrayList<Item>();
 	
-	public static void Init() {
+	public static void PreInit() {
 		galaxiteItem = new ItemGalaxite(Names.GALAXITE_ITEM, CreativeTabs.MATERIALS);
 		ITEMS.add(galaxiteItem);
 
@@ -66,7 +67,9 @@ public class ModItems {
 		ITEMS.add(galaxiteBootsItem);
 	}
 	
-	public static void PostInit() {
+	public static void Init() {
 		GameRegistry.addSmelting(ModBlocks.galaxiteOre, new ItemStack(galaxiteItem), 3.0f);
+		
+		OreDictionary.registerOre("gemGalaxite", galaxiteItem);
 	}
 }
