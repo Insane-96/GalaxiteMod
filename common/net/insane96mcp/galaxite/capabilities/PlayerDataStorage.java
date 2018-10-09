@@ -42,7 +42,7 @@ public class PlayerDataStorage implements IStorage<IPlayerData> {
             }
         }
 
-        if (!nbttaglist.hasNoTags())
+        if (!nbttaglist.isEmpty())
         {
             tag.setTag("Items", nbttaglist);
         }

@@ -25,7 +25,7 @@ public class BlockGalaxiteOre extends BlockOre{
 	}
 	
 	@Override
-	public String getUnlocalizedName() {
+	public String getTranslationKey() {
 		return "tile." + Galaxite.RESOURCE_PREFIX + Names.GALAXITE_ORE;
 	}
 	

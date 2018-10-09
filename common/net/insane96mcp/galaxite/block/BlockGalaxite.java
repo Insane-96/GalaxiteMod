@@ -23,7 +23,7 @@ public class BlockGalaxite extends Block{
 	
 	
 	@Override
-	public String getUnlocalizedName() {
+	public String getTranslationKey() {
 		return "tile." + Galaxite.RESOURCE_PREFIX + Names.GALAXITE_BLOCK;
 	}
 	
