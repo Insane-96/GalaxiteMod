@@ -49,7 +49,7 @@ public class LivingDeath {
 	    
 	    if (materialsUsed == 0) 
 	    	return;
-    	float maxChancePerc = Properties.Armor.saveItemsMaxChance / 100f;
+    	float maxChancePerc = Properties.Armor.BonusStats.saveItemsMaxChance / 100f;
     	float chancePerMaterial = maxChancePerc / 24f;
     	float chance = chancePerMaterial * materialsUsed;
 		
@@ -87,7 +87,7 @@ public class LivingDeath {
 			for (ItemStack armorPiece : playerArmor) {
 		    	for (int armor = 0; armor < armorList.length; armor++) {
 			        if (ItemStack.areItemsEqualIgnoreDurability(armorPiece, armorList[armor])) {
-			        	armorPiece.damageItem(Properties.Armor.saveItemsDamagePerItemSaved, playerMP);
+			        	armorPiece.damageItem(Properties.Armor.BonusStats.saveItemsDamagePerItemSaved, playerMP);
 			        	break;
 					}
 				}

@@ -23,7 +23,7 @@ public class OreGenerator implements IWorldGenerator {
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world,
 			IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-		if ((chunkX < 16 && chunkX > -16) && (chunkZ < 16 && chunkZ > -16) && !Properties.OreGeneration.generateOnMainIsland)
+		if ((chunkX < 16 && chunkX > -16) && (chunkZ < 16 && chunkZ > -16) && !Properties.OreGeneration.generateOnDragonDeath)
 			return;
 		
 		BlockPos chunkPos = new BlockPos(chunkX * 16, 0, chunkZ * 16);

@@ -7,6 +7,6 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class ModMaterial {
-	public static ToolMaterial Tool = EnumHelper.addToolMaterial("galaxite", Properties.Tool.harvestLevel, Properties.Tool.maxUses, Properties.Tool.efficency, Properties.Tool.baseDamage, Properties.Tool.enchantability);
-	public static ArmorMaterial Armor = EnumHelper.addArmorMaterial("galaxite", "galaxite:galaxite_armor", Properties.Armor.baseDurability, Properties.Armor.armorPoints, Properties.Armor.enchantability, SoundEvents.ITEM_ARMOR_EQUIP_IRON, Properties.Armor.toughness);
+	public static ToolMaterial Tool = EnumHelper.addToolMaterial("galaxite", Properties.ToolsAndWeapons.MaterialStats.harvestLevel, Properties.ToolsAndWeapons.MaterialStats.maxUses, Properties.ToolsAndWeapons.MaterialStats.efficency, Properties.ToolsAndWeapons.MaterialStats.baseDamage, Properties.ToolsAndWeapons.MaterialStats.enchantability);
+	public static ArmorMaterial Armor = EnumHelper.addArmorMaterial("galaxite", "galaxite:galaxite_armor", Properties.Armor.MaterialStats.baseDurability, Properties.Armor.MaterialStats.armorPoints, Properties.Armor.MaterialStats.enchantability, SoundEvents.ITEM_ARMOR_EQUIP_IRON, Properties.Armor.MaterialStats.toughness);
 }

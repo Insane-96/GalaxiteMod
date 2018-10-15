@@ -40,7 +40,7 @@ public class PlayerBreakSpeed {
 			return;
 		
 		float speed = event.getOriginalSpeed();
-		speed += event.getOriginalSpeed() * Properties.Tool.endEfficencyBonus / 100f;
+		speed += event.getOriginalSpeed() * Properties.ToolsAndWeapons.BonusStats.efficiency / 100f;
 		event.setNewSpeed(speed);
 	}
 }

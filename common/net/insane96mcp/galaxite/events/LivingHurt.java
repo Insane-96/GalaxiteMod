@@ -21,52 +21,7 @@ public class LivingHurt {
 	
 	@SubscribeEvent
 	public static void EventLivingHurt(LivingHurtEvent event) {
-		//PlayerDamageReduction(event);
 		PlayerDamageDealt(event);
-	}
-	
-	public static void PlayerDamageReduction(LivingHurtEvent event) {
-		/*//May not work
-		if (Properties.Armor.voidReducedDamage == 0.0f)
-			return;
-		
-		EntityLivingBase entityLivingBase = event.getEntityLiving();
-		if (!(entityLivingBase instanceof EntityPlayer))
-			return;
-			
-		EntityPlayer player = (EntityPlayer)entityLivingBase;
-		DamageSource source = event.getSource();
-		Entity entity = source.getEntity();
-		
-		if (source != DamageSource.OUT_OF_WORLD)
-			return;
-		
-	    int materialsUsed = 0;
-	    Iterable<ItemStack> playerArmor = player.getArmorInventoryList();
-	    for (ItemStack armorPiece : playerArmor) {
-	    	for (int i = 0; i < armorList.length; i++) {
-		        if (ItemStack.areItemsEqualIgnoreDurability(armorPiece, armorList[i])) {
-					materialsUsed += materialPerPiece[i];
-					
-		        	if (player.world.rand.nextDouble() < Properties.Armor.voidDamageArmorChance / 100f) { 
-		        		armorPiece.damageItem(Properties.Armor.voidDamageArmor, player);
-		        		player.playSound(SoundEvents.ENTITY_ENDERMEN_TELEPORT, 1.0f, 0.5f);
-		        	}
-
-					break;
-				}
-			}
-		}
-	    
-	    if(materialsUsed == 0)
-	    	return;
-		
-		float amount = event.getAmount();
-	    
-    	float reductionPerMaterial = Properties.Armor.voidReducedDamage / 100f / 24f;
-    	float percentageReduction = reductionPerMaterial * materialsUsed;
-    	amount = amount * (1f - percentageReduction);
-        event.setAmount(amount);*/
 	}
 	
 	private static ItemStack[] galaxiteTools = new ItemStack[] {
@@ -104,6 +59,6 @@ public class LivingHurt {
 		
 		float damageDealt = event.getAmount();
 
-		event.setAmount(damageDealt + damageDealt * (Properties.Tool.endDamageBonus / 100f));
+		event.setAmount(damageDealt + damageDealt * (Properties.ToolsAndWeapons.BonusStats.damage / 100f));
 	}
 }
