@@ -35,16 +35,13 @@ public class ItemGalaxiteArmor extends ItemArmor{
 	}
 	
 	@Override
-	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		if (!Properties.General.showMoreInfo)
-			return;
-		
-		if (GuiScreen.isShiftKeyDown() && Properties.General.showDetailedInfo) {
+	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {		
+		if (GuiScreen.isShiftKeyDown() && Properties.General.showAdvanncedInfo) {
 			tooltip.add(I18n.format(Tooltips.Armor.adv_info_save_inventory, Properties.Armor.saveItemsMaxChance, Properties.Armor.saveItemsDamagePerItemSaved));
 		}
 		else {
 			tooltip.add(I18n.format(Tooltips.Armor.base_info_save_inventory));
-			if (Properties.General.showDetailedInfo)
+			if (Properties.General.showAdvanncedInfo)
 				tooltip.add(I18n.format(Tooltips.General.shiftForMore));
 		}
 	}

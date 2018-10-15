@@ -28,18 +28,15 @@ public class ItemGalaxiteShovel extends ItemSpade{
 	}
 	
 	@Override
-	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		if (!Properties.General.showMoreInfo)
-			return;
-		
-		if (GuiScreen.isShiftKeyDown() && Properties.General.showDetailedInfo) {
+	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {		
+		if (GuiScreen.isShiftKeyDown() && Properties.General.showAdvanncedInfo) {
 			tooltip.add(I18n.format(Tooltips.Tools.adv_info_increased_efficency, Properties.Tool.endEfficencyBonus));
 			tooltip.add(I18n.format(Tooltips.Tools.adv_info_increased_damage, Properties.Tool.endDamageBonus));
 		}
 		else {
 			tooltip.add(I18n.format(Tooltips.Tools.base_info_increased_efficency));
 			tooltip.add(I18n.format(Tooltips.Tools.base_info_increased_damage));
-			if (Properties.General.showDetailedInfo)
+			if (Properties.General.showAdvanncedInfo)
 				tooltip.add(I18n.format(Tooltips.General.shiftForMore));
 		}
 	}

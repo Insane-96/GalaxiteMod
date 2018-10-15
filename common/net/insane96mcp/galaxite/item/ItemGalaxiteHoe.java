@@ -28,9 +28,6 @@ public class ItemGalaxiteHoe extends ItemHoe{
 	
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		if (!Properties.General.showMoreInfo)
-			return;
-		
 		tooltip.add(I18n.format(Tooltips.Hoe.base_info));
 	}
 }

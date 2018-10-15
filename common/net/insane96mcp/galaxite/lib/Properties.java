@@ -10,12 +10,10 @@ public class Properties {
 	}
 	
 	public static class General{
-		public static boolean showMoreInfo;
-		public static boolean showDetailedInfo;
+		public static boolean showAdvanncedInfo;
 		
 		public static void Init() {
-			showMoreInfo = Config.LoadBoolProperty("general", "show_more_info", "Should more info be displayed in item's tooltip?", true);
-			showDetailedInfo = Config.LoadBoolProperty("general", "show_detailed_info", "Should advanced info (and 'hold shift for more info') be displayed in item's tooltip?", false);
+			showAdvanncedInfo = Config.LoadBoolProperty("general", "show_advanced_info", "Whenever or not enable the \"Press SHIFT to show more infos\" thing", false);
 		}
 	}
 	
