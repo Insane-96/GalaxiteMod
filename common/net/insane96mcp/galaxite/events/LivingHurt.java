@@ -11,6 +11,11 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class LivingHurt {
 	
+	@SubscribeEvent
+	public static void EventLivingHurt(LivingHurtEvent event) {
+		PlayerDamageDealt(event);
+	}
+	
 	private static ItemStack[] armorList = new ItemStack[] {
 		new ItemStack(ModItems.galaxiteHelmetItem), 
 		new ItemStack(ModItems.galaxiteChestplateItem), 
@@ -18,11 +23,6 @@ public class LivingHurt {
 		new ItemStack(ModItems.galaxiteBootsItem)
 	};
 	static float[] materialPerPiece = new float[] { 5, 8, 7, 4 };
-	
-	@SubscribeEvent
-	public static void EventLivingHurt(LivingHurtEvent event) {
-		PlayerDamageDealt(event);
-	}
 	
 	private static ItemStack[] galaxiteTools = new ItemStack[] {
 		new ItemStack(ModItems.galaxiteAxeItem),
