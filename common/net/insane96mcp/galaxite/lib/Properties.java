@@ -10,10 +10,10 @@ public class Properties {
 	}
 	
 	public static class General{
-		public static boolean showAdvanncedInfo;
+		public static boolean showAdvancedInfo;
 		
 		public static void Init() {
-			showAdvanncedInfo = Config.LoadBoolProperty("general", "show_advanced_info", "Whenever or not enable the \"Press SHIFT to show more infos\" thing", false);
+			showAdvancedInfo = Config.LoadBoolProperty("general", "show_advanced_info", "Whenever or not enable the \"Press SHIFT to show more infos\" thing", false);
 		}
 	}
 	
