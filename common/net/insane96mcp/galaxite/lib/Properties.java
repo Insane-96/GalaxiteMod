@@ -107,7 +107,7 @@ public class Properties {
 		public static int dragonDeathTick;
 		
 		public static void Init() {
-			orePerVein = Config.LoadIntProperty(CATEGORY, "ore_per_vein", "Ores Generated Per Vein", 6);
+			orePerVein = Config.LoadIntProperty(CATEGORY, "ore_per_vein", "Ores Generated Per Vein", 5);
 			veinPerChunk = Config.LoadIntProperty(CATEGORY, "vein_per_chunk", "Veins that try to spawn in a chunk", 5);
 			onlyNearAir = Config.LoadBoolProperty(CATEGORY, "only_near_air", "Should Veins only generate near Air (so mining will lead no ores)", true);
 
