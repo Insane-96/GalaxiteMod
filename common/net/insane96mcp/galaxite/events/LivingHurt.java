@@ -17,19 +17,19 @@ public class LivingHurt {
 	}
 	
 	private static ItemStack[] armorList = new ItemStack[] {
-		new ItemStack(ModItems.galaxiteHelmetItem), 
-		new ItemStack(ModItems.galaxiteChestplateItem), 
-		new ItemStack(ModItems.galaxiteLeggingsItem), 
-		new ItemStack(ModItems.galaxiteBootsItem)
+		new ItemStack(ModItems.galaxiteHelmet), 
+		new ItemStack(ModItems.galaxiteChestplate), 
+		new ItemStack(ModItems.galaxiteLeggings), 
+		new ItemStack(ModItems.galaxiteBoots)
 	};
 	static float[] materialPerPiece = new float[] { 5, 8, 7, 4 };
 	
 	private static ItemStack[] galaxiteTools = new ItemStack[] {
-		new ItemStack(ModItems.galaxiteAxeItem),
-		new ItemStack(ModItems.galaxiteHoeItem),
-		new ItemStack(ModItems.galaxitePickaxeItem),
-		new ItemStack(ModItems.galaxiteShovelItem),
-		new ItemStack(ModItems.galaxiteSwordItem)
+		new ItemStack(ModItems.galaxiteAxe),
+		new ItemStack(ModItems.galaxiteHoe),
+		new ItemStack(ModItems.galaxitePickaxe),
+		new ItemStack(ModItems.galaxiteShovel),
+		new ItemStack(ModItems.galaxiteSword)
 	};
 	
 	public static void PlayerDamageDealt(LivingHurtEvent event) {

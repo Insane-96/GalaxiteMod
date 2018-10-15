@@ -20,56 +20,56 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class ModItems {
 	
-	public static ItemGalaxite galaxiteItem;
+	public static ItemGalaxite galaxite;
 	
-	public static ItemGalaxitePickaxe galaxitePickaxeItem;
-	public static ItemGalaxiteShovel galaxiteShovelItem;
-	public static ItemGalaxiteAxe galaxiteAxeItem;
-	public static ItemGalaxiteHoe galaxiteHoeItem;
-	public static ItemGalaxiteSword galaxiteSwordItem;
+	public static ItemGalaxitePickaxe galaxitePickaxe;
+	public static ItemGalaxiteShovel galaxiteShovel;
+	public static ItemGalaxiteAxe galaxiteAxe;
+	public static ItemGalaxiteHoe galaxiteHoe;
+	public static ItemGalaxiteSword galaxiteSword;
 
-	public static ItemGalaxiteArmor galaxiteHelmetItem;
-	public static ItemGalaxiteArmor galaxiteChestplateItem;
-	public static ItemGalaxiteArmor galaxiteLeggingsItem;
-	public static ItemGalaxiteArmor galaxiteBootsItem;
+	public static ItemGalaxiteArmor galaxiteHelmet;
+	public static ItemGalaxiteArmor galaxiteChestplate;
+	public static ItemGalaxiteArmor galaxiteLeggings;
+	public static ItemGalaxiteArmor galaxiteBoots;
 	
 	public static ArrayList<Item> ITEMS = new ArrayList<Item>();
 	
 	public static void PreInit() {
-		galaxiteItem = new ItemGalaxite(Names.GALAXITE_ITEM, CreativeTabs.MATERIALS);
-		ITEMS.add(galaxiteItem);
+		galaxite = new ItemGalaxite(Names.GALAXITE_ITEM, CreativeTabs.MATERIALS);
+		ITEMS.add(galaxite);
 
-		galaxitePickaxeItem = new ItemGalaxitePickaxe(Names.GALAXITE_PICKAXE, ModMaterial.Tool, CreativeTabs.TOOLS);
-		ITEMS.add(galaxitePickaxeItem);
+		galaxitePickaxe = new ItemGalaxitePickaxe(Names.GALAXITE_PICKAXE, ModMaterial.Tool, CreativeTabs.TOOLS);
+		ITEMS.add(galaxitePickaxe);
 
-		galaxiteShovelItem = new ItemGalaxiteShovel(Names.GALAXITE_SHOVEL, ModMaterial.Tool, CreativeTabs.TOOLS);
-		ITEMS.add(galaxiteShovelItem);
+		galaxiteShovel = new ItemGalaxiteShovel(Names.GALAXITE_SHOVEL, ModMaterial.Tool, CreativeTabs.TOOLS);
+		ITEMS.add(galaxiteShovel);
 
-		galaxiteAxeItem = new ItemGalaxiteAxe(Names.GALAXITE_AXE, ModMaterial.Tool, CreativeTabs.TOOLS);
-		ITEMS.add(galaxiteAxeItem);
+		galaxiteAxe = new ItemGalaxiteAxe(Names.GALAXITE_AXE, ModMaterial.Tool, CreativeTabs.TOOLS);
+		ITEMS.add(galaxiteAxe);
 		
-		galaxiteHoeItem = new ItemGalaxiteHoe(Names.GALAXITE_HOE, ModMaterial.Tool, CreativeTabs.TOOLS);
-		ITEMS.add(galaxiteHoeItem);
+		galaxiteHoe = new ItemGalaxiteHoe(Names.GALAXITE_HOE, ModMaterial.Tool, CreativeTabs.TOOLS);
+		ITEMS.add(galaxiteHoe);
 		
-		galaxiteSwordItem = new ItemGalaxiteSword(Names.GALAXITE_SWORD, ModMaterial.Tool, CreativeTabs.COMBAT);
-		ITEMS.add(galaxiteSwordItem);
+		galaxiteSword = new ItemGalaxiteSword(Names.GALAXITE_SWORD, ModMaterial.Tool, CreativeTabs.COMBAT);
+		ITEMS.add(galaxiteSword);
 		
-		galaxiteHelmetItem = new ItemGalaxiteArmor(Names.GALAXITE_HELMET, ModMaterial.Armor, 0, EntityEquipmentSlot.HEAD);
-		ITEMS.add(galaxiteHelmetItem);
+		galaxiteHelmet = new ItemGalaxiteArmor(Names.GALAXITE_HELMET, ModMaterial.Armor, 0, EntityEquipmentSlot.HEAD);
+		ITEMS.add(galaxiteHelmet);
 
-		galaxiteChestplateItem = new ItemGalaxiteArmor(Names.GALAXITE_CHESTPLATE, ModMaterial.Armor, 0, EntityEquipmentSlot.CHEST);
-		ITEMS.add(galaxiteChestplateItem);
+		galaxiteChestplate = new ItemGalaxiteArmor(Names.GALAXITE_CHESTPLATE, ModMaterial.Armor, 0, EntityEquipmentSlot.CHEST);
+		ITEMS.add(galaxiteChestplate);
 
-		galaxiteLeggingsItem = new ItemGalaxiteArmor(Names.GALAXITE_LEGGINGS, ModMaterial.Armor, 1, EntityEquipmentSlot.LEGS);
-		ITEMS.add(galaxiteLeggingsItem);
+		galaxiteLeggings = new ItemGalaxiteArmor(Names.GALAXITE_LEGGINGS, ModMaterial.Armor, 1, EntityEquipmentSlot.LEGS);
+		ITEMS.add(galaxiteLeggings);
 
-		galaxiteBootsItem = new ItemGalaxiteArmor(Names.GALAXITE_BOOTS, ModMaterial.Armor, 0, EntityEquipmentSlot.FEET);
-		ITEMS.add(galaxiteBootsItem);
+		galaxiteBoots = new ItemGalaxiteArmor(Names.GALAXITE_BOOTS, ModMaterial.Armor, 0, EntityEquipmentSlot.FEET);
+		ITEMS.add(galaxiteBoots);
 	}
 	
 	public static void Init() {
-		GameRegistry.addSmelting(ModBlocks.galaxiteOre, new ItemStack(galaxiteItem), 3.0f);
+		GameRegistry.addSmelting(ModBlocks.galaxiteOre, new ItemStack(galaxite), 3.0f);
 		
-		OreDictionary.registerOre("gemGalaxite", galaxiteItem);
+		OreDictionary.registerOre("gemGalaxite", galaxite);
 	}
 }

@@ -41,7 +41,7 @@ public class BlockGalaxiteOre extends BlockOre{
 	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		return ModItems.galaxiteItem;
+		return ModItems.galaxite;
 	}
 	
 	@Override

@@ -17,10 +17,10 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class LivingDeath {
 	
 	private static ItemStack[] armorList = new ItemStack[] {
-		new ItemStack(ModItems.galaxiteHelmetItem), 
-		new ItemStack(ModItems.galaxiteChestplateItem), 
-		new ItemStack(ModItems.galaxiteLeggingsItem), 
-		new ItemStack(ModItems.galaxiteBootsItem)
+		new ItemStack(ModItems.galaxiteHelmet), 
+		new ItemStack(ModItems.galaxiteChestplate), 
+		new ItemStack(ModItems.galaxiteLeggings), 
+		new ItemStack(ModItems.galaxiteBoots)
 	};
 	static float[] materialPerPiece = new float[] { 5, 8, 7, 4 };
 	

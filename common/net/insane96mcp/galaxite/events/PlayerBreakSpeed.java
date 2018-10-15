@@ -10,9 +10,9 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class PlayerBreakSpeed {
 	private static ItemStack[] validEfficencyBoost = new ItemStack[] {
-			new ItemStack(ModItems.galaxiteAxeItem),
-			new ItemStack(ModItems.galaxitePickaxeItem),
-			new ItemStack(ModItems.galaxiteShovelItem),
+			new ItemStack(ModItems.galaxiteAxe),
+			new ItemStack(ModItems.galaxitePickaxe),
+			new ItemStack(ModItems.galaxiteShovel),
 	};
 
 	@SubscribeEvent
