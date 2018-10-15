@@ -2,6 +2,8 @@ package net.insane96mcp.galaxite;
 
 import java.util.Random;
 
+import org.apache.logging.log4j.Logger;
+
 import net.insane96mcp.galaxite.proxies.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -28,8 +30,12 @@ public class Galaxite {
 	@SidedProxy(clientSide = "net.insane96mcp.galaxite.proxies.ClientProxy", serverSide = "net.insane96mcp.galaxite.proxies.ServerProxy")
 	public static CommonProxy proxy;
 	
+	public static Logger logger;
+	
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent event) {
+		logger = event.getModLog();
+		
 		proxy.PreInit(event);
 	}
 	

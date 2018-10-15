@@ -21,6 +21,11 @@ public class Properties {
 	
 	public static class ToolsAndWeapons{
 		public static final String CATEGORY = "tools_and_weapons";
+				
+		public static void Init() {
+			MaterialStats.Init();
+			BonusStats.Init();
+		}
 		
 		public static class MaterialStats{
 			public static final String SUBCATEGORY = CATEGORY + ".material_stats";
@@ -51,16 +56,15 @@ public class Properties {
 				damage = Config.LoadFloatProperty(SUBCATEGORY, "end_bonus_damage", "Bonus % damage increase for Galaxite Tools and Sword when in the end", 50.0f);
 			}
 		}
-		
+	}
+	
+	public static class Armor{
+		public static final String CATEGORY = "armor";
 		
 		public static void Init() {
 			MaterialStats.Init();
 			BonusStats.Init();
 		}
-	}
-	
-	public static class Armor{
-		public static final String CATEGORY = "armor";
 		
 		public static class MaterialStats{
 			public static final String SUBCATEGORY = CATEGORY + ".material_stats";
@@ -89,31 +93,46 @@ public class Properties {
 				saveItemsDamagePerItemSaved = Config.LoadIntProperty(SUBCATEGORY, "save_items_damage_per_item", "How much every piece of armor will be damaged per item stack saved from the Void", 2);
 			}
 		}
-		
-		public static void Init() {
-			MaterialStats.Init();
-			BonusStats.Init();
-		}
 	}
 	
 	public static class OreGeneration{
 		public static final String CATEGORY = "ore_generation";
-		
-		public static int orePerVein;
-		public static int veinPerChunk;
+
 		public static boolean onlyNearAir;
-		public static boolean generateOnDragonDeath;
-		public static int firstDragonDeathTick;
-		public static int dragonDeathTick;
 		
 		public static void Init() {
-			orePerVein = Config.LoadIntProperty(CATEGORY, "ore_per_vein", "Ores Generated Per Vein", 5);
-			veinPerChunk = Config.LoadIntProperty(CATEGORY, "vein_per_chunk", "Veins that try to spawn in a chunk", 5);
-			onlyNearAir = Config.LoadBoolProperty(CATEGORY, "only_near_air", "Should Veins only generate near Air (so mining will lead no ores)", true);
-
-			generateOnDragonDeath = Config.LoadBoolProperty(CATEGORY, "generate_on_dragon_death", "Should Veins generate in the main island when he dragon death animation is playing?", true);
-			firstDragonDeathTick = Config.LoadIntProperty(CATEGORY, "first_dragon_death_tick", "Every how many ticks during the first dragon death animation try to spawn a vein of galaxite in the main island?", 1);
-			dragonDeathTick = Config.LoadIntProperty(CATEGORY, "dragon_death_tick", "Every how many ticks during the non-first dragon death animation try to spawn a vein of galaxite in the main island?", 10);
+			OuterIslands.Init();
+			MainIsland.Init();
+			
+			onlyNearAir = Config.LoadBoolProperty(CATEGORY, "only_near_air", "Should Veins only generate near Air (so mining will lead no ores) (applies to main and outer islands generation)", true);
+		}
+		
+		public static class OuterIslands{
+			public static final String SUBCATEGORY = CATEGORY + ".outer_islands";
+			
+			public static int orePerVein;
+			public static int veinPerChunk;
+						
+			public static void Init() {
+				orePerVein = Config.LoadIntProperty(SUBCATEGORY, "ore_per_vein", "Ores Generated Per Vein in outer islands", 3);
+				veinPerChunk = Config.LoadIntProperty(SUBCATEGORY, "vein_per_chunk", "Veins that try to spawn in a chunk in the outer islands", 5);
+			}
+		}
+		
+		public static class MainIsland{
+			public static final String SUBCATEGORY = CATEGORY + ".main_island";
+			
+			public static boolean generateOnDragonDeath;
+			public static int dragonDeathTick;
+			public static int veinPerTick;
+			public static int orePerVein;
+			
+			public static void Init() {
+				generateOnDragonDeath = Config.LoadBoolProperty(SUBCATEGORY, "generate_on_dragon_death", "Should Veins generate in the main island when the first killed dragon dies?", true);
+				dragonDeathTick = Config.LoadIntProperty(SUBCATEGORY, "dragon_death_tick", "Every how many ticks during the first dragon death animation try to spawn 'vein_per_tick' vein of galaxite in the main island?", 1);
+				veinPerTick = Config.LoadIntProperty(SUBCATEGORY, "vein_per_tick", "Veins that try to spawn every tick in the main island on dragon death", 5);
+				orePerVein = Config.LoadIntProperty(SUBCATEGORY, "ore_per_vein", "Ores Generated Per Vein in the main island", 3);
+			}
 		}
 	}
 }
