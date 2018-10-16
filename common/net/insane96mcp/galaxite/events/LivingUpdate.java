@@ -4,8 +4,6 @@ import java.util.Random;
 
 import net.insane96mcp.galaxite.Galaxite;
 import net.insane96mcp.galaxite.lib.Properties;
-import net.insane96mcp.galaxite.lib.Properties.OreGeneration;
-import net.insane96mcp.galaxite.worldgen.GalaxiteGenerator;
 import net.insane96mcp.galaxite.worldgen.OreGenerator;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.boss.EntityDragon;
