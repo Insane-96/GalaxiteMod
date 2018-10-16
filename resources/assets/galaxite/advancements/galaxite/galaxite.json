@@ -10,7 +10,7 @@
             "translate": "advancements.galaxite.galaxite.description"
         }
     },
-    "parent": "galaxite:galaxite/galaxite_ore",
+    "parent": "galaxite:galaxite/root",
     "criteria": {
         "galaxite": {
             "trigger": "minecraft:inventory_changed",

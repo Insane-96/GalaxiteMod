@@ -2,7 +2,6 @@ package net.insane96mcp.galaxite.events;
 
 import java.util.Random;
 
-import net.insane96mcp.galaxite.Galaxite;
 import net.insane96mcp.galaxite.lib.Properties;
 import net.insane96mcp.galaxite.worldgen.OreGenerator;
 import net.minecraft.entity.EntityLivingBase;
@@ -33,8 +32,8 @@ public class LivingUpdate {
 		if (!dragon.getPhaseManager().getCurrentPhase().getType().equals(PhaseList.DYING))
 			return;
 		
-		Galaxite.logger.info("{}, {}", dragon.deathTicks, isFirstDragon);
 		if (dragon.deathTicks > 0) {
+			
 			if (isFirstDragon && dragon.deathTicks % Properties.OreGeneration.MainIsland.dragonDeathTick == 0) {
 				World world = dragon.getEntityWorld();
 				Random random = world.rand;

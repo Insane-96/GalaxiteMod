@@ -14,40 +14,64 @@
 		"announce_to_chat": false
     },
     "criteria": {
-        "positive": {
+        "positive_x": {
             "trigger": "minecraft:location",
             "conditions": {
                 "dimension": "the_end",
 				"position": {
 					"x": {
-						"min": 500,
-						"max": 30000000
-					},
-					"z": {
-						"min": 500,
+						"min": 750,
 						"max": 30000000
 					}
 				}
             }
         },
-        "negative": {
+        "negative_z": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "dimension": "the_end",
+				"position": {
+					"z": {
+						"min": -30000000,
+						"max": -750
+					}
+				}
+            }
+        },
+        "negative_x": {
             "trigger": "minecraft:location",
             "conditions": {
                 "dimension": "the_end",
 				"position": {
 					"x": {
 						"min": -30000000,
-						"max": -500
-					},
-					"z": {
-						"min": -30000000,
-						"max": -500
+						"max": -750
 					}
 				}
             }
-        }
+        },
+        "positive_z": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "dimension": "the_end",
+				"position": {
+					"z": {
+						"min": 750,
+						"max": 30000000
+					}
+				}
+            }
+        },
+		"kill_dragon": {
+			"trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+					"type": "ender_dragon"
+				}
+            }
+		}
     },
 	"requirements": [
-		[ "positive", "negative" ]
+		[ "positive_x", "negative_z", "negative_x", "positive_z", "kill_dragon" ]
 	]
 }
