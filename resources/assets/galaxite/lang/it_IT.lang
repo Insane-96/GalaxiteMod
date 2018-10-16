@@ -28,16 +28,13 @@ tooltip.tools.adv_info.increased_efficency=§dQuando nell'end, questo rompe i bl
 advancements.galaxite.root.title=Galaxite Mod
 advancements.galaxite.root.description=L'inizio dell'anti void
 
-advancements.galaxite.ore.title=Le particelle, waoh
-advancements.galaxite.ore.description=Ottieni una Galaxite Grezza. Può essere trovato nelle isole esterne dell'End
-
-advancements.galaxite.galaxite.title=Viola come l'End?
-advancements.galaxite.galaxite.description=Cuoci una Galaxite Grezza per ottenere una Galaxite
+advancements.galaxite.title=Viola come l'End?
+advancements.galaxite.description=Ottieni una Galaxite. Può essere trovato nelle isole esterne dell'End
 
 advancements.galaxite.sword.title=Uccidi-End
 advancements.galaxite.sword.description=Ottieni una Spada di Galaxite
 
-advancements.galaxite.tools.title=Disintegriamo questa Pietra dell'End
+advancements.galaxite.tools.title=Scava-End
 advancements.galaxite.tools.description=Ottieni ogni attrezzo di Galaxite
 
 advancements.galaxite.armor.title=Anti-Void

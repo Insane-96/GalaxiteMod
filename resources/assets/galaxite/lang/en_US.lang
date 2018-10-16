@@ -28,8 +28,8 @@ tooltip.tools.adv_info.increased_efficency=§dWhen in the End this tool is §l%f
 advancements.galaxite.root.title=Galaxite Mod
 advancements.galaxite.root.description=The beginning of anti-void
 
-advancements.galaxite.ore.title=Purple like the End?
-advancements.galaxite.ore.description=Obtain a Galaxite. Can be found in the outer islands of the End or after killing the ender dragon in the main island
+advancements.galaxite.title=Purple like the End?
+advancements.galaxite.description=Obtain a Galaxite. Can be found in the outer islands of the End or after killing the ender dragon in the main island
 
 advancements.galaxite.sword.title=End-slayer
 advancements.galaxite.sword.description=Get a Galaxite Sword
