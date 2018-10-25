@@ -19,8 +19,8 @@ public class OreGenerator implements IWorldGenerator {
 	public static GalaxiteGenerator mainIslandGenerator;
 	
 	public OreGenerator() {
-		generator = new GalaxiteGenerator(ModBlocks.galaxiteOre.getDefaultState(), Properties.OreGeneration.OuterIslands.orePerVein, BlockMatcher.forBlock(Blocks.END_STONE));
-		mainIslandGenerator = new GalaxiteGenerator(ModBlocks.galaxiteOre.getDefaultState(), Properties.OreGeneration.MainIsland.orePerVein, BlockMatcher.forBlock(Blocks.END_STONE));
+		generator = new GalaxiteGenerator(ModBlocks.galaxiteOre.getDefaultState(), Properties.config.oreGeneration.outerIslands.orePerVein, BlockMatcher.forBlock(Blocks.END_STONE));
+		mainIslandGenerator = new GalaxiteGenerator(ModBlocks.galaxiteOre.getDefaultState(), Properties.config.oreGeneration.mainIsland.orePerVein, BlockMatcher.forBlock(Blocks.END_STONE));
 	}
 	
 	@Override
@@ -39,7 +39,7 @@ public class OreGenerator implements IWorldGenerator {
 
 		int dimension = world.provider.getDimension();
 
-		for (int i = 0; i < Properties.OreGeneration.OuterIslands.veinPerChunk; i++) {
+		for (int i = 0; i < Properties.config.oreGeneration.outerIslands.veinPerChunk; i++) {
 			generator.generate(world, random, chunkPos.add(random.nextInt(12) + 2, random.nextInt(64), random.nextInt(12) + 2));
 		}
 	}	

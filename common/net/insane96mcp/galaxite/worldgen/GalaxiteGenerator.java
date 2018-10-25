@@ -4,19 +4,15 @@ import java.util.Random;
 
 import com.google.common.base.Predicate;
 
-import net.insane96mcp.galaxite.Galaxite;
-import net.insane96mcp.galaxite.init.ModBlocks;
 import net.insane96mcp.galaxite.lib.Properties;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockAir;
 import net.minecraft.block.BlockStone;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.block.state.pattern.BlockMatcher;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class GalaxiteGenerator extends WorldGenerator
@@ -53,8 +49,8 @@ public class GalaxiteGenerator extends WorldGenerator
     		blockposYDown instanceof BlockAir || 
     		blockposZUp instanceof BlockAir || 
     		blockposZDown instanceof BlockAir) &&
-    		Properties.OreGeneration.onlyNearAir) ||
-    		!Properties.OreGeneration.onlyNearAir
+    		Properties.config.oreGeneration.onlyNearAir) ||
+    		!Properties.config.oreGeneration.onlyNearAir
     	) {
     		float f = rand.nextFloat() * (float)Math.PI;
             double d0 = (double)((float)(position.getX() + 8) + MathHelper.sin(f) * (float)this.numberOfBlocks / 8.0F);

@@ -1,7 +1,7 @@
 package net.insane96mcp.galaxite.item;
 
 import net.insane96mcp.galaxite.Galaxite;
-import net.insane96mcp.galaxite.lib.Names;
+import net.insane96mcp.galaxite.lib.Stings.Names;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

@@ -1,5 +1,6 @@
 package net.insane96mcp.galaxite.events;
 
+import net.insane96mcp.galaxite.Galaxite;
 import net.insane96mcp.galaxite.init.ModItems;
 import net.insane96mcp.galaxite.lib.Properties;
 import net.minecraft.entity.Entity;
@@ -7,8 +8,11 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+
+@Mod.EventBusSubscriber(modid = Galaxite.MOD_ID)
 public class LivingHurt {
 	
 	@SubscribeEvent
@@ -59,6 +63,6 @@ public class LivingHurt {
 		
 		float damageDealt = event.getAmount();
 
-		event.setAmount(damageDealt + damageDealt * (Properties.ToolsAndWeapons.BonusStats.damage / 100f));
+		event.setAmount(damageDealt + damageDealt * (Properties.config.toolsAndWeapons.bonusDamage / 100f));
 	}
 }

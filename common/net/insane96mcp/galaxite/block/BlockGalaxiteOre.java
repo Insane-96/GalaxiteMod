@@ -4,7 +4,7 @@ import java.util.Random;
 
 import net.insane96mcp.galaxite.Galaxite;
 import net.insane96mcp.galaxite.init.ModItems;
-import net.insane96mcp.galaxite.lib.Names;
+import net.insane96mcp.galaxite.lib.Stings.Names;
 import net.minecraft.block.BlockOre;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;

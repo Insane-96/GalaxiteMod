@@ -1,14 +1,16 @@
 package net.insane96mcp.galaxite.events;
 
+import net.insane96mcp.galaxite.Galaxite;
 import net.insane96mcp.galaxite.capabilities.IPlayerData;
 import net.insane96mcp.galaxite.capabilities.ItemSlot;
 import net.insane96mcp.galaxite.capabilities.PlayerDataProvider;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 
+@Mod.EventBusSubscriber(modid = Galaxite.MOD_ID)
 public class PlayerRespawn {
 	
 	@SubscribeEvent

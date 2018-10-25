@@ -10,7 +10,7 @@ import net.insane96mcp.galaxite.item.ItemGalaxitePickaxe;
 import net.insane96mcp.galaxite.item.ItemGalaxiteShovel;
 import net.insane96mcp.galaxite.item.ItemGalaxiteSword;
 import net.insane96mcp.galaxite.item.material.ModMaterial;
-import net.insane96mcp.galaxite.lib.Names;
+import net.insane96mcp.galaxite.lib.Stings.Names;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;

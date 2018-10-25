@@ -3,8 +3,6 @@ package net.insane96mcp.galaxite.events;
 import net.insane96mcp.galaxite.Galaxite;
 import net.insane96mcp.galaxite.init.ModBlocks;
 import net.insane96mcp.galaxite.init.ModItems;
-import net.insane96mcp.galaxite.lib.Names;
-import net.insane96mcp.galaxite.lib.Properties;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;

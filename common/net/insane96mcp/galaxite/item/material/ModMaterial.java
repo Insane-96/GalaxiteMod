@@ -1,12 +1,11 @@
 package net.insane96mcp.galaxite.item.material;
 
-import net.insane96mcp.galaxite.lib.Properties;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class ModMaterial {
-	public static ToolMaterial Tool = EnumHelper.addToolMaterial("galaxite", Properties.ToolsAndWeapons.MaterialStats.harvestLevel, Properties.ToolsAndWeapons.MaterialStats.maxUses, Properties.ToolsAndWeapons.MaterialStats.efficency, Properties.ToolsAndWeapons.MaterialStats.baseDamage, Properties.ToolsAndWeapons.MaterialStats.enchantability);
-	public static ArmorMaterial Armor = EnumHelper.addArmorMaterial("galaxite", "galaxite:galaxite_armor", Properties.Armor.MaterialStats.baseDurability, Properties.Armor.MaterialStats.armorPoints, Properties.Armor.MaterialStats.enchantability, SoundEvents.ITEM_ARMOR_EQUIP_IRON, Properties.Armor.MaterialStats.toughness);
+	public static ToolMaterial Tool = EnumHelper.addToolMaterial("galaxite", 3, 502, 7f, 2.5f, 15);
+	public static ArmorMaterial Armor = EnumHelper.addArmorMaterial("galaxite", "galaxite:galaxite_armor", 33, new int[] {2, 5, 4, 2}, 15, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0f);
 }

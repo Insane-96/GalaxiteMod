@@ -2,20 +2,16 @@ package net.insane96mcp.galaxite.item;
 
 import java.util.List;
 
-import com.mojang.realmsclient.gui.ChatFormatting;
-
 import net.insane96mcp.galaxite.Galaxite;
 import net.insane96mcp.galaxite.lib.Properties;
-import net.insane96mcp.galaxite.lib.Tooltips;
+import net.insane96mcp.galaxite.lib.Stings.Tooltips;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 public class ItemGalaxiteArmor extends ItemArmor{
@@ -36,12 +32,12 @@ public class ItemGalaxiteArmor extends ItemArmor{
 	
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {		
-		if (GuiScreen.isShiftKeyDown() && Properties.General.showAdvancedInfo) {
-			tooltip.add(I18n.format(Tooltips.Armor.adv_info_save_inventory, Properties.Armor.BonusStats.saveItemsMaxChance, Properties.Armor.BonusStats.saveItemsDamagePerItemSaved));
+		if (GuiScreen.isShiftKeyDown() && Properties.config.showAdvancedInfo) {
+			tooltip.add(I18n.format(Tooltips.Armor.adv_info_save_inventory, Properties.config.armor.saveItemsMaxChance, Properties.config.armor.saveItemsDamagePerItemSaved));
 		}
 		else {
 			tooltip.add(I18n.format(Tooltips.Armor.base_info_save_inventory));
-			if (Properties.General.showAdvancedInfo)
+			if (Properties.config.showAdvancedInfo)
 				tooltip.add(I18n.format(Tooltips.General.shiftForMore));
 		}
 	}

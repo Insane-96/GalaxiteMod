@@ -12,8 +12,10 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+@Mod.EventBusSubscriber(modid = Galaxite.MOD_ID)
 public class LivingDeath {
 	
 	private static ItemStack[] armorList = new ItemStack[] {
@@ -49,7 +51,7 @@ public class LivingDeath {
 	    
 	    if (materialsUsed == 0) 
 	    	return;
-    	float maxChancePerc = Properties.Armor.BonusStats.saveItemsMaxChance / 100f;
+    	float maxChancePerc = Properties.config.armor.saveItemsMaxChance / 100f;
     	float chancePerMaterial = maxChancePerc / 24f;
     	float chance = chancePerMaterial * materialsUsed;
 		
@@ -87,7 +89,7 @@ public class LivingDeath {
 			for (ItemStack armorPiece : playerArmor) {
 		    	for (int armor = 0; armor < armorList.length; armor++) {
 			        if (ItemStack.areItemsEqualIgnoreDurability(armorPiece, armorList[armor])) {
-			        	armorPiece.damageItem(Properties.Armor.BonusStats.saveItemsDamagePerItemSaved, playerMP);
+			        	armorPiece.damageItem(Properties.config.armor.saveItemsDamagePerItemSaved, playerMP);
 			        	break;
 					}
 				}

@@ -1,14 +1,14 @@
 package net.insane96mcp.galaxite.events;
 
-import javax.swing.text.html.parser.Entity;
-
+import net.insane96mcp.galaxite.Galaxite;
 import net.insane96mcp.galaxite.capabilities.IPlayerData;
 import net.insane96mcp.galaxite.capabilities.PlayerDataProvider;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraftforge.event.entity.player.PlayerDropsEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+@Mod.EventBusSubscriber(modid = Galaxite.MOD_ID)
 public class PlayerDrops {
 	
 	@SubscribeEvent
