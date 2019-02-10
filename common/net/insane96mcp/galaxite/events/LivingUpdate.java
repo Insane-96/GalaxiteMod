@@ -30,6 +30,9 @@ public class LivingUpdate {
 			return;
 		
 		EntityDragon dragon = (EntityDragon)entity;
+		if (dragon.getFightManager() == null)
+			return;
+		
 		boolean isFirstDragon = !dragon.getFightManager().hasPreviouslyKilledDragon();
 		
 		if (!dragon.getPhaseManager().getCurrentPhase().getType().equals(PhaseList.DYING))
